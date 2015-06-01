@@ -4,20 +4,36 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <div class="header">
-    <div class="supernav">
-        <button>Unishop</button>
-        <button>Twister</button>
-        <button>RockStar's</button>
+    <div class="supernavigation col-xs-12">
+        <ul class="nav nav-tabs">
+            <li class="supernavigation-li"><a href="index.html">Unishop</a>
+            <li class="supernavigation-li"><a href="#">Twister</a>
+            <li class="supernavigation-li"><a href="#">RockStar's</a>
+        </ul>
     </div>
-    <h1>StoReSmart</h1>
+    <div class="header-logo">
+        <img class="header-logo-top" src="img/logo-black.png">
+        <img class="header-logo-bottom" src="img/logo-gray.png">
+    </div>
 
-    <p>solutions</p>
+    <div class="navigation col-xs-12 navbar navbar-default" role="navigation">
 
-    <div class="nav">
-        <ul>
+        <button type="button" class="navigation-button navbar-toggle" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1">
+
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+
+        </button>
+        <ul class="nav navbar-nav navbar-left collapse navbar-collapse">
             <li>Women</li>
             <li>Men</li>
             <li>Children</li>
@@ -25,26 +41,74 @@
             <li>Contact</li>
             <li>Locator</li>
         </ul>
+        <div class="btn-toolbar pull-right" role="toolbar">
+            <div class="btn-group"><i class="glyphicon glyphicon-user"></i></div>
+            <div class="btn-group"><i class="glyphicon glyphicon-shopping-cart"></i><span class="badge">5</span></div>
+        </div>
+    </div>
+    <div class="features col-xs-12">
+
     </div>
 </div>
 <div class="content">
-    <div class="section"><h2>Popular products</h2></div>
-    <div class="section"><h2>Just arrived</h2></div>
-        <div class="section"><h2>Worldwide store locator</h2>
+    <div class="section">
+        <div class="text-center"><h2 class="section-name">Popular products</h2>
+            <a href="#" class="section-p">View all</a></div>
+        <div class="goods"><img src="img/smth.jpg">
+        <div class="price"></div>
+            <div class="add-to-cart"></div>
+        </div>
+        <div class="goods"><img src="img/smth.jpg">
+            <div class="price"></div>
+            <div class="add-to-cart"></div>
+        </div>
+        <div class="goods"><img src="img/smth.jpg">
+            <div class="price"></div>
+            <div class="add-to-cart"></div>
+        </div>
+        <div class="goods"><img src="img/smth.jpg">
+            <div class="price"></div>
+            <div class="add-to-cart"></div>
+        </div>
+    </div>
+    <div class="section text-center">
+        <div class="text-center"><h2 class="section-name">Just arrived</h2>
+            <a href="#" class="section-p">View all</a></div>
+        <div class="goods"><img src="img/smth.jpg">
+            <div class="price"></div>
+            <div class="add-to-cart"></div>
+        </div>
+        <div class="goods"><img src="img/smth.jpg">
+            <div class="price"></div>
+            <div class="add-to-cart"></div>
+        </div>
+        <div class="goods"><img src="img/smth.jpg">
+            <div class="price"></div>
+            <div class="add-to-cart"></div>
+        </div>
+        <div class="goods"><img src="img/smth.jpg">
+            <div class="price"></div>
+            <div class="add-to-cart"></div>
+        </div>
+    </div>
+    <div class="section text-center"><h2 class="section-name text-center">Worldwide store locator</h2>
         <input type="text" placeholder="Zip-code or Adress">
         Radius: <input list="radius">
-            <datalist id="radius">
-                <option value="25 Mile"></option>
-                <option value="2 500 Mile"></option>
-                <option value="40 000 Mile"></option>
-            </datalist></input>
-        </div>
+        <datalist id="radius">
+            <option value="25 Mile"></option>
+            <option value="2 500 Mile"></option>
+            <option value="40 000 Mile"></option>
+        </datalist>
+        </input>
+    </div>
 </div>
 <div class="footer">
-<h1>Unishop</h1>
+    <h1>Unishop</h1>
+
     <p>
         Your about us information would feet here nicely
     </p>
+
     <div class="footer-links">
         <ul>
             <li>About Us</li>
