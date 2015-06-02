@@ -6,8 +6,10 @@ $product-center-line-color: #bbbbbb;
 $radius-word-text-color: #b8b8b8;
 $header-icon-color: #a0a0a0;
 $upper-text-color: #999999;
+$navigation-background-1: #787878;
 $product-name-color: #555555;
 $section-name-color: #434343;
+$navigation-border: #333333;
 $black: black;
 $badge-color: #e13f56;
 $new-color: #f45281;
@@ -64,11 +66,13 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
   font-family: Aleo-regular;
 }
 
-.oswald-light-font, .product__add-to-cart span, .content__section-name, .footer__top-name {
+.oswald-light-font, .product__add-to-cart span, .content__section-name, .footer__top-name,
+h4.panel-title > a, .panel-body > ul > li > a{
   font-family: "Oswald Light", sans-serif;
 }
 
-.oswald-regular-font, .product__name, .links-head, .product__price span, .footer__radius, .change-miles, .footer__find-store span, .links-ul li a {
+.oswald-regular-font, .product__name, .links-head, .product__price span, .footer__radius,
+.change-miles, .footer__find-store span, .links-ul li a {
   font-family: 'Oswald', sans-serif;
 }
 
@@ -106,6 +110,10 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
       color: $upper-text-color;
     }
   }
+}
+
+.header {
+  position: relative;
 }
 
 .nav > li > a:hover {
@@ -427,4 +435,69 @@ background-color: $sale-color;
   bottom:0;
   right:0;
   left:0;
+}
+
+.header__navigation
+{
+  position: absolute !important;
+  z-index: 20;
+  overflow:visible;
+  background-color:#fff;
+  border:1px solid #ddd;
+  top: 187px;
+  width: 100%;
+}
+.panel-body {
+  padding: 0;
+}
+
+.panel-body ul > li > a {
+  display: block;
+  line-height: 37px;
+  margin-left: 15px;
+  padding-left: 5px;
+  background-color:$navigation-border !important;
+  &:hover {
+    background-color: $black  !important;
+    color: $white;
+  }
+}
+.panel-default > .panel-heading, .panel-body ul li a {
+  border-radius: 0;
+  border: 2px solid $navigation-border;
+  background-color: $navigation-background-1;
+  color: $white;
+  font-size: 16px;
+}
+
+.panel-body > ul > li {
+  background-color:$navigation-border;
+
+}
+
+.panel-body ul {
+  margin-top: -3px;
+  margin-bottom: -10px;
+}
+h4.panel-title > a, .panel-body ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h4.panel-title > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 37px;
+  padding-left: 5px;
+}
+
+.panel-heading {
+  padding: 0 !important;
+}
+
+a[aria-expanded="true"] {
+  //line-height: 37px!important;
+  background-color:$upper-background-color !important;
+  color: $navigation-border !important;
 }

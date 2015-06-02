@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
 </head>
 <body>
 
@@ -25,26 +27,83 @@
     </div>
 
     <div class="navigation col-xs-12 navbar navbar-default" role="navigation">
-        <button type="button" class="navigation-button navbar-toggle" data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1">
+        <button type="button" class="navigation-button navbar-toggle tgl" data-toggle="collapse"
+                data-target="#accordion">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <ul class="nav navbar-nav navbar-left collapse navbar-collapse">
-            <li>Women</li>
-            <li>Men</li>
-            <li>Children</li>
-            <li>Sale</li>
-            <li>Contact</li>
-            <li>Locator</li>
-        </ul>
+        <!-- <ul class="nav navbar-nav navbar-left collapse navbar-collapse">
+             <li>Women</li>
+             <li>Men</li>
+             <li>Children</li>
+             <li>Sale</li>
+             <li>Contact</li>
+             <li>Locator</li>
+         </ul> -->
+        <!-- ----------------------------------------------------------------------------------->
+
+
+        <!-- ----------------------------------------------------------------------------------->
+
         <div class="btn-toolbar pull-right" role="toolbar">
             <div class="btn-group"><i class="glyphicon glyphicon-user"></i></div>
             <div class="btn-group"><i class="glyphicon glyphicon-shopping-cart"></i><span class="badge">5</span></div>
         </div>
     </div>
+    <div id="accordion" class="panel-group collapse header__navigation">
+        <div class="panel panel-default">
+            <div class="panel-heading accordion-toggle">
+                <h4 class="panel-title">
+                    <a href="#collapse-1" data-parent="#accordion" data-toggle="collapse">search</a>
+                </h4>
+            </div>
+            <div id="collapse-1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">blabla1</a></li>
+                        <li><a href="#">blabla2</a></li>
+                        <li><a href="#">blabla3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading accordion-toggle">
+                <h4 class="panel-title">
+                    <a href="#collapse-2" data-parent="#accordion" data-toggle="collapse">shop by brands</a>
+                </h4>
+            </div>
+            <div id="collapse-2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">blabla1</a></li>
+                        <li><a href="#">blabla2</a></li>
+                        <li><a href="#">blabla3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading accordion-toggle">
+                <h4 class="panel-title">
+                    <a href="#collapse-3" data-parent="#accordion" data-toggle="collapse">promotions</a>
+                </h4>
+            </div>
+            <div id="collapse-3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">blabla1</a></li>
+                        <li><a href="#">blabla2</a></li>
+                        <li><a href="#">blabla3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6"></div>
+
     <div class="header__slider col-xs-12">
 
 
@@ -57,6 +116,7 @@
         <div class="text-center"><h2 class="content__section-name">Popular products</h2>
             <a href="#" class="content__section-view-all">View all</a></div>
         <div class="product text-center"><img src="img/1.jpg">
+
             <div class="new">NEW</div>
             <div class="product__description">
                 <div class="product__info-wrapper">
@@ -118,6 +178,7 @@
             <div class="product__add-to-cart"><span>Add to cart</span></div>
         </div>
         <div class="product text-center"><img src="img/6.jpg">
+
             <div class="product__description">
                 <div class="product__info-wrapper">
                     <div class="product__name">Leather hightops</div>
