@@ -1,4 +1,18 @@
-@charset "UTF-8";
+@font-face {
+  font-family: Aleo-regular;
+  src: url("../fonts/aleo-regular.woff"); }
+@font-face {
+  font-family: "Oswald Light";
+  src: url("../fonts/oswald-light-webfont.woff"); }
+.aleo-font, .content__section-view-all {
+  font-family: Aleo-regular; }
+
+.oswald-light-font, .product__add-to-cart span, .content__section-name, .footer__top-name {
+  font-family: "Oswald Light", sans-serif; }
+
+.oswald-regular-font, .product__name, .links-head, .product__price span, .footer__radius, .change-miles, .footer__find-store span, .links-ul li a {
+  font-family: 'Oswald', sans-serif; }
+
 .nav-tabs {
   text-align: center;
   border-bottom: none;
@@ -44,19 +58,19 @@
   background-color: white;
   border: none; }
 
-.supernavigation {
+.header__upper-navigation {
   background-color: #e9e9e9;
   border-bottom: 2px solid #d7d7d7;
   margin-bottom: 30px; }
 
-.header-logo {
+.header__logo {
   margin-bottom: 30px; }
 
-.header-logo-top, .header-logo-bottom {
+.header__logo-top, .header__logo-bottom {
   margin: 0 auto;
   display: block; }
 
-.header-logo-bottom {
+.header__logo-bottom {
   margin-top: 10px; }
 
 .navigation-button {
@@ -96,62 +110,54 @@
   font-weight: normal;
   padding: 3px; }
 
-.features {
+.header__slider {
   height: 290px;
   background-color: black;
   margin-bottom: 40px; }
 
-.section {
+.content__section {
   width: 100%; }
 
-.section-name, .section-name-bottom {
+.content__section-name, .footer__top-name {
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   font-weight: 100;
-  font-size: 30px;
+  font-size: 35px;
   color: #434343;
   padding-bottom: 20px;
-  margin-top: 50px;
-  border-bottom: double 4px #d7d7d7; }
+  border-bottom: double 4px #d7d7d7;
+  margin-top: 50px; }
 
-.section-p {
-  font-family: Aleo-regular;
+.content__section-view-all {
   color: #999999;
   display: block;
   margin: 0 auto;
   font-size: 18px; }
 
-@font-face {
-  font-family: Aleo-regular;
-  /* ╚ь  °ЁшЇЄр */
-  src: url("../fonts/aleo-regular.woff");
-  /* ╧єЄ№ ъ Їрщыє ёю °ЁшЇЄюь */ }
-.goods {
+.product {
   width: 220px;
   height: 360px;
-  margin: 20px auto; }
+  margin: 25px auto;
+  position: relative; }
 
-.price {
+.product__description {
   height: 100px;
   width: 100%;
   background-color: #cccccc;
   position: relative; }
 
-.add-to-cart {
+.product__add-to-cart, .new, .sale {
   height: 40px;
   width: 100%;
   background-color: #2fb789; }
-  .add-to-cart span {
+  .product__add-to-cart span, .new span, .sale span {
     line-height: 40px;
     text-align: center;
     color: white;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 100; }
+    font-size: 20px; }
 
-.goods-name, .links-head {
+.product__name, .links-head {
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   font-weight: 100;
   font-size: 18px;
@@ -163,16 +169,15 @@
   background-color: #bbbbbb;
   margin: 5px auto; }
 
-.goods-price > span {
+.product__price > span {
   color: white;
-  font-size: 20px;
-  font-family: 'Oswald', sans-serif; }
-  .goods-price > span:before {
+  font-size: 20px; }
+  .product__price > span:before {
     content: "$ ";
     font-size: 19px;
     vertical-align: 5%; }
 
-.goods-info {
+.product__info-wrapper {
   margin: auto;
   position: absolute;
   height: 50%;
@@ -181,14 +186,14 @@
   right: 0;
   left: 0; }
 
-.section-bottom {
+.footer__top {
   height: 525px;
   width: 100%;
   background-image: url("../img/bg.png");
   border-bottom: 1px solid #d7d7d7; }
 
-.section-name-bottom {
-  background-color: rgba(0, 190, 212, 0.5);
+.footer__top-name {
+  background-color: rgba(14, 132, 145, 0.5);
   border-bottom: none;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -197,44 +202,44 @@
   font-size: 40px;
   line-height: 1.3em; }
 
-.input-adress {
+.footer__zip-input {
   display: block;
   margin: 40px auto;
   padding: 5px 10px;
   width: 200px;
-  text-align: center; }
+  text-align: center;
+  border-radius: 0; }
 
 ::-webkit-input-placeholder {
-  font-family: 'Oswald', sans-serif;
-  font-size: 16px; }
+  font-family: 'Oswald Light', sans-serif;
+  font-size: 18px; }
 
 :-moz-placeholder {
-  font-family: 'Oswald', sans-serif;
-  font-size: 16px; }
+  font-family: 'Oswald Light', sans-serif;
+  font-size: 18px; }
 
 ::-moz-placeholder {
-  font-family: 'Oswald', sans-serif;
-  font-size: 16px; }
+  font-family: 'Oswald Light', sans-serif;
+  font-size: 18px; }
 
 :-ms-input-placeholder {
-  font-family: 'Oswald', sans-serif;
-  font-size: 16px; }
+  font-family: 'Oswald Light', sans-serif;
+  font-size: 18px; }
 
-.left-inner-addon {
+.footer__zip {
   position: relative; }
-  .left-inner-addon i {
+  .footer__zip i {
     position: absolute;
     padding: 10px 12px;
     pointer-events: none;
-    left: 40px;
+    left: 65px;
     top: -5px;
-    color: rgba(0, 190, 212, 0.5); }
+    color: rgba(14, 132, 145, 0.5); }
 
-.radius, .change-miles {
-  font-family: 'Oswald', sans-serif;
+.footer__radius, .change-miles {
   font-size: 25px; }
 
-.radius {
+.footer__radius {
   text-transform: uppercase;
   color: #b8b8b8; }
 
@@ -267,25 +272,23 @@ label:after {
   pointer-events: none;
   color: #434343; }
 
-.find-store {
+.footer__find-store {
   background-color: #167c9a;
   width: 200px;
   height: 50px;
   text-align: center;
   margin: 40px auto; }
-  .find-store span {
+  .footer__find-store span {
     color: white;
-    font-family: "Oswald", sans-serif;
     font-size: 22px;
     line-height: 50px; }
 
-.footer-description {
+.footer__description {
   display: inline-block;
   width: auto; }
-  .footer-description h1 {
-    font-family: Aleo-regular;
+  .footer__description h1 {
     text-transform: uppercase; }
-  .footer-description p {
+  .footer__description p {
     color: #999999;
     display: inline-block;
     width: 60%; }
@@ -296,24 +299,38 @@ label:after {
 .links-ul li {
   padding: 10px 0; }
   .links-ul li a {
-    font-family: Oswald, sans-serif;
     color: #555555;
     font-size: 15px; }
 
-.footer-social {
+.footer__social {
   font-size: 30px;
   display: flex;
   flex-flow: column wrap;
   align-content: center; }
-  .footer-social .footer-social-row {
+  .footer__social .footer__social-row {
     margin: 10px 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around; }
-    .footer-social .footer-social-row i {
+    .footer__social .footer__social-row i {
       color: #12cce2; }
 
-.form-control {
-  border-radius: 0; }
+.footer__shopname {
+  color: #434343; }
+
+.new {
+  background-color: #f45281; }
+
+.sale {
+  background-color: #7f446e; }
+
+.new, .sale {
+  margin: auto;
+  position: absolute;
+  width: 0%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
 
 /*# sourceMappingURL=main.css.map */

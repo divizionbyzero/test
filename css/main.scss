@@ -1,19 +1,23 @@
-$supernav-color: #e9e9e9;
-$supernav-border: #d7d7d7;
-$supernav-text: #999999;
-$icon-color: #a0a0a0;
 $white: white;
+$upper-background-color: #e9e9e9;
+$upper-border-color: #d7d7d7;
+$product-background-color: #cccccc;
+$product-center-line-color: #bbbbbb;
+$radius-word-text-color: #b8b8b8;
+$header-icon-color: #a0a0a0;
+$upper-text-color: #999999;
+$product-name-color: #555555;
+$section-name-color: #434343;
 $black: black;
 $badge-color: #e13f56;
-$section-name-color: #434343;
-$price-color: #cccccc;
-$add-to-cart-color: #2fb789;
-$goods-name: #555555;
-$goods-line: #bbbbbb;
-$bottom-background: rgba(0, 190, 212, 0.5);
-$radius-text: #b8b8b8;
-$find-store: #167c9a;
+$new-color: #f45281;
+$sale-color: #7f446e;
 $social-color: #12cce2;
+$add-to-cart-color: #2fb789;
+$find-store: #167c9a;
+$bottom-background-color: rgba(14, 132, 145, 0.5);
+
+
 
 @mixin placeholder-style {
   ::-webkit-input-placeholder {
@@ -46,6 +50,32 @@ $social-color: #12cce2;
   border-radius: $radius; /* CSS3 */
 }
 
+@font-face {
+  font-family: Aleo-regular;
+  src: url("../fonts/aleo-regular.woff");
+}
+
+@font-face {
+  font-family: "Oswald Light";
+  src: url("../fonts/oswald-light-webfont.woff");
+}
+
+.aleo-font, .content__section-view-all,  {
+  font-family: Aleo-regular;
+}
+
+.oswald-light-font, .product__add-to-cart span, .content__section-name, .footer__top-name {
+  font-family: "Oswald Light", sans-serif;
+}
+
+.oswald-regular-font, .product__name, .links-head, .product__price span, .footer__radius, .change-miles, .footer__find-store span, .links-ul li a {
+  font-family: 'Oswald', sans-serif;
+}
+
+.nexa-font {
+
+}
+
 .nav-tabs {
   text-align: center;
   border-bottom: none;
@@ -54,29 +84,26 @@ $social-color: #12cce2;
     position: relative;
     float: none;
     display: inline-block;
-    //border-right: 1px solid $supernav-border;
-    //border-left: 1px solid $supernav-border;
     *display: inline; /* ie7 fix */
     zoom: 1; /* hasLayout ie7 trigger */
     &:first-of-type, &:last-of-type {
-      border-right: 1px solid $supernav-border;
-      border-left: 1px solid $supernav-border;
+      border-right: 1px solid $upper-border-color;
+      border-left: 1px solid $upper-border-color;
     }
     &:hover {
       position: relative;
       //top: 0px;
       bottom: -1px;
-      border-right: 2px solid $supernav-border;
-      border-left: 2px solid $supernav-border;
+      border-right: 2px solid $upper-border-color;
+      border-left: 2px solid $upper-border-color;
       background-color: $white;
       margin-left: -1px;
       margin-right: -1px;
-      //margin-bottom: -2px;
     }
     a {
       border: none;
       @include box-radius(none);
-      color: $supernav-text;
+      color: $upper-text-color;
     }
   }
 }
@@ -86,22 +113,22 @@ $social-color: #12cce2;
   border: none;
 }
 
-.supernavigation {
-  background-color: $supernav-color;
-  border-bottom: 2px solid $supernav-border;
+.header__upper-navigation {
+  background-color: $upper-background-color;
+  border-bottom: 2px solid $upper-border-color;
   margin-bottom: 30px;
 }
 
-.header-logo {
+.header__logo {
   margin-bottom: 30px;
 }
 
-.header-logo-top, .header-logo-bottom {
+.header__logo-top, .header__logo-bottom {
   margin: 0 auto;
   display: block;
 }
 
-.header-logo-bottom {
+.header__logo-bottom {
   margin-top: 10px;
 }
 
@@ -124,15 +151,15 @@ $social-color: #12cce2;
 .glyphicon {
   line-height: 25px;
   font-size: 19.5px;
-  color: $icon-color;
+  color: $header-icon-color;
 }
 
 .btn-toolbar > .btn-group {
   text-align: center;
   padding-right: 10px;
   padding-left: 10px;
-  border-right: 1px solid $supernav-border;
-  border-left: 1px solid $supernav-border;
+  border-right: 1px solid $upper-border-color;
+  border-left: 1px solid $upper-border-color;
   margin-left: -1px;
 }
 
@@ -148,56 +175,50 @@ $social-color: #12cce2;
   padding: 3px;
 }
 
-.features {
+.header__slider {
   height: 290px;
   background-color: $black;
   margin-bottom: 40px;
 }
 
-.section {
+.content__section {
   width: 100%;
 
 }
 
-.section-name, .section-name-bottom {
+.content__section-name, .footer__top-name {
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   font-weight: 100;
-  font-size: 30px;
+  font-size: 35px;
   color: $section-name-color;
   padding-bottom: 20px;
+  border-bottom: double 4px $upper-border-color;
   margin-top: 50px;
-  border-bottom: double 4px $supernav-border;
 }
 
-.section-p {
-  font-family: Aleo-regular;
-  color: $supernav-text;
+.content__section-view-all {
+  color: $upper-text-color;
   display: block;
   margin: 0 auto;
   font-size: 18px;
 }
 
-@font-face {
-  font-family: Aleo-regular; /* ָלÿ רנטפעא */
-  src: url("../fonts/aleo-regular.woff"); /* ֿףעü ך פאיכף סמ רנטפעמל */
-}
-
-.goods {
+.product {
   width: 220px;
   height: 360px;
-  margin: 20px auto;
-}
-
-.price {
-  height: 100px;
-  width: 100%;
-  background-color: $price-color;
+  margin: 25px auto;
   position: relative;
 }
 
-.add-to-cart {
+.product__description {
+  height: 100px;
+  width: 100%;
+  background-color: $product-background-color;
+  position: relative;
+}
+
+.product__add-to-cart, .new, .sale {
   height: 40px;
   width: 100%;
   background-color: $add-to-cart-color;
@@ -205,31 +226,29 @@ $social-color: #12cce2;
     line-height: 40px;
     text-align: center;
     color: $white;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 100;
+    font-size: 20px;
+
   }
 }
 
-.goods-name, .links-head {
+.product__name, .links-head {
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   font-weight: 100;
   font-size: 18px;
-  color: $goods-name;
+  color: $product-name-color;
 }
 
 .line {
   height: 1px;
   width: 100px;
-  background-color: $goods-line;
+  background-color: $product-center-line-color;
   margin: 5px auto;
 }
 
-.goods-price > span {
+.product__price > span {
   color: $white;
   font-size: 20px;
-  font-family: 'Oswald', sans-serif;
   &:before {
     content: "$ ";
     font-size: 19px;
@@ -237,7 +256,7 @@ $social-color: #12cce2;
   }
 }
 
-.goods-info {
+.product__info-wrapper {
   margin: auto;
   position: absolute;
   height: 50%;
@@ -247,15 +266,15 @@ $social-color: #12cce2;
   left: 0;
 }
 
-.section-bottom {
+.footer__top {
   height: 525px;
   width: 100%;
   background-image: url("../img/bg.png");
-  border-bottom: 1px solid $supernav-border;
+  border-bottom: 1px solid $upper-border-color;
 }
 
-.section-name-bottom {
-  background-color: $bottom-background;
+.footer__top-name {
+  background-color: $bottom-background-color;
   border-bottom: none;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -265,39 +284,39 @@ $social-color: #12cce2;
   line-height: 1.3em;
 }
 
-.input-adress {
+.footer__zip-input {
   display: block;
   margin: 40px auto;
   padding: 5px 10px;
   width: 200px;
   text-align: center;
+  border-radius: 0;
 }
 
 @include placeholder-style() {
-  font-family: 'Oswald', sans-serif;
-  font-size: 16px;
+  font-family: 'Oswald Light', sans-serif;
+  font-size: 18px;
 }
 
-.left-inner-addon {
+.footer__zip {
   position: relative;
   i {
     position: absolute;
     padding: 10px 12px;
     pointer-events: none;
-    left: 40px;
+    left: 65px;
     top: -5px;
-    color: $bottom-background;
+    color: $bottom-background-color;
   }
 }
 
-.radius, .change-miles {
-  font-family: 'Oswald', sans-serif;
+.footer__radius, .change-miles {
   font-size: 25px;
 }
 
-.radius {
+.footer__radius {
   text-transform: uppercase;
-  color: $radius-text;
+  color: $radius-word-text-color;
 }
 
 .change-miles {
@@ -332,7 +351,7 @@ label:after {
   color: $section-name-color;
 }
 
-.find-store {
+.footer__find-store {
   background-color: $find-store;
   width: 200px;
   height: 50px;
@@ -340,21 +359,19 @@ label:after {
   margin: 40px auto;
   span {
     color: $white;
-    font-family: "Oswald", sans-serif;
     font-size: 22px;
     line-height: 50px;
   }
 }
 
-.footer-description {
+.footer__description {
   display: inline-block;
   width: auto;
   h1 {
-    font-family: Aleo-regular;
     text-transform: uppercase;
   }
   p {
-    color: $supernav-text;
+    color: $upper-text-color;
     display: inline-block;
     width: 60%;
 
@@ -369,18 +386,17 @@ label:after {
   padding: 10px 0;
 
   a {
-    font-family: Oswald, sans-serif;
-    color: $goods-name;
+    color: $product-name-color;
     font-size: 15px;
   }
 
 }
-.footer-social {
+.footer__social {
   font-size: 30px;
   display: flex;
   flex-flow: column wrap;
   align-content: center;
-  .footer-social-row {
+  .footer__social-row {
     margin:10px 0;
     display: flex;
     flex-flow: row nowrap;
@@ -391,7 +407,24 @@ label:after {
   }
 
 }
+.footer__shopname {
+  color: $section-name-color;
+}
 
-.form-control {
-  border-radius: 0;
+.new {
+background-color: $new-color;
+}
+
+.sale {
+background-color: $sale-color;
+}
+
+.new, .sale {
+  margin:auto;
+  position:absolute;
+  width:0%;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
 }
