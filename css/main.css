@@ -104,7 +104,7 @@
 .section {
   width: 100%; }
 
-.section-name {
+.section-name, .section-name-bottom {
   display: inline-block;
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
@@ -119,7 +119,8 @@
   font-family: Aleo-regular;
   color: #999999;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-size: 18px; }
 
 @font-face {
   font-family: Aleo-regular;
@@ -129,16 +130,190 @@
 .goods {
   width: 220px;
   height: 360px;
-  margin: 30px auto; }
+  margin: 20px auto; }
 
 .price {
   height: 100px;
   width: 100%;
-  background-color: #cccccc; }
+  background-color: #cccccc;
+  position: relative; }
 
 .add-to-cart {
   height: 40px;
   width: 100%;
   background-color: #2fb789; }
+  .add-to-cart span {
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100; }
+
+.goods-name, .links-head {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 18px;
+  color: #555555; }
+
+.line {
+  height: 1px;
+  width: 100px;
+  background-color: #bbbbbb;
+  margin: 5px auto; }
+
+.goods-price > span {
+  color: white;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif; }
+  .goods-price > span:before {
+    content: "$ ";
+    font-size: 19px;
+    vertical-align: 5%; }
+
+.goods-info {
+  margin: auto;
+  position: absolute;
+  height: 50%;
+  top: -15px;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+
+.section-bottom {
+  height: 525px;
+  width: 100%;
+  background-image: url("../img/bg.png");
+  border-bottom: 1px solid #d7d7d7; }
+
+.section-name-bottom {
+  background-color: rgba(0, 190, 212, 0.5);
+  border-bottom: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+  margin-top: 30px;
+  font-size: 40px;
+  line-height: 1.3em; }
+
+.input-adress {
+  display: block;
+  margin: 40px auto;
+  padding: 5px 10px;
+  width: 200px;
+  text-align: center; }
+
+::-webkit-input-placeholder {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px; }
+
+:-moz-placeholder {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px; }
+
+::-moz-placeholder {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px; }
+
+:-ms-input-placeholder {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px; }
+
+.left-inner-addon {
+  position: relative; }
+  .left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+    left: 40px;
+    top: -5px;
+    color: rgba(0, 190, 212, 0.5); }
+
+.radius, .change-miles {
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px; }
+
+.radius {
+  text-transform: uppercase;
+  color: #b8b8b8; }
+
+.change-miles {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #434343;
+  width: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer; }
+
+label {
+  position: relative;
+  background: transparent; }
+
+label:after {
+  content: '\25C0 \25B6';
+  font: 14px "Oswald", monospace;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: -14px;
+  top: 7px;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none;
+  color: #434343; }
+
+.find-store {
+  background-color: #167c9a;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  margin: 40px auto; }
+  .find-store span {
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    line-height: 50px; }
+
+.footer-description {
+  display: inline-block;
+  width: auto; }
+  .footer-description h1 {
+    font-family: Aleo-regular;
+    text-transform: uppercase; }
+  .footer-description p {
+    color: #999999;
+    display: inline-block;
+    width: 60%; }
+
+.links-head {
+  margin: 20px 0; }
+
+.links-ul li {
+  padding: 10px 0; }
+  .links-ul li a {
+    font-family: Oswald, sans-serif;
+    color: #555555;
+    font-size: 15px; }
+
+.footer-social {
+  font-size: 30px;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center; }
+  .footer-social .footer-social-row {
+    margin: 10px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around; }
+    .footer-social .footer-social-row i {
+      color: #12cce2; }
+
+.form-control {
+  border-radius: 0; }
 
 /*# sourceMappingURL=main.css.map */

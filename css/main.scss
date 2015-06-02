@@ -8,12 +8,34 @@ $badge-color: #e13f56;
 $section-name-color: #434343;
 $price-color: #cccccc;
 $add-to-cart-color: #2fb789;
+$goods-name: #555555;
+$goods-line: #bbbbbb;
+$bottom-background: rgba(0, 190, 212, 0.5);
+$radius-text: #b8b8b8;
+$find-store: #167c9a;
+$social-color: #12cce2;
+
+@mixin placeholder-style {
+  ::-webkit-input-placeholder {
+    @content
+  }
+  :-moz-placeholder {
+    @content
+  }
+  ::-moz-placeholder {
+    @content
+  }
+  :-ms-input-placeholder {
+    @content
+  }
+}
 
 @mixin box-model($sizing) {
   box-sizing: #{$sizing}-box;
   -moz-box-sizing: #{$sizing}-box; /*Firefox 1-3*/
   -webkit-box-sizing: #{$sizing}-box; /* Safari */
 }
+
 @mixin box-radius($radius) {
   -moz-border-radius: $radius; /* Firefox */
   -webkit-border-radius: $radius; /* Safari, Google Chrome */
@@ -25,17 +47,17 @@ $add-to-cart-color: #2fb789;
 }
 
 .nav-tabs {
-  text-align:center;
+  text-align: center;
   border-bottom: none;
   position: relative;
   li {
     position: relative;
-    float:none;
-    display:inline-block;
+    float: none;
+    display: inline-block;
     //border-right: 1px solid $supernav-border;
     //border-left: 1px solid $supernav-border;
-    *display:inline; /* ie7 fix */
-    zoom:1; /* hasLayout ie7 trigger */
+    *display: inline; /* ie7 fix */
+    zoom: 1; /* hasLayout ie7 trigger */
     &:first-of-type, &:last-of-type {
       border-right: 1px solid $supernav-border;
       border-left: 1px solid $supernav-border;
@@ -59,7 +81,7 @@ $add-to-cart-color: #2fb789;
   }
 }
 
-.nav > li> a:hover {
+.nav > li > a:hover {
   background-color: $white;
   border: none;
 }
@@ -73,6 +95,7 @@ $add-to-cart-color: #2fb789;
 .header-logo {
   margin-bottom: 30px;
 }
+
 .header-logo-top, .header-logo-bottom {
   margin: 0 auto;
   display: block;
@@ -84,13 +107,14 @@ $add-to-cart-color: #2fb789;
 
 .navigation-button {
   padding: 6px;
-  float:left;
+  float: left;
 }
 
 .navbar {
   min-height: 10px;
   margin-bottom: 0;
 }
+
 .navbar-toggle {
   margin-top: 0;
   margin-bottom: 0;
@@ -100,8 +124,9 @@ $add-to-cart-color: #2fb789;
 .glyphicon {
   line-height: 25px;
   font-size: 19.5px;
-color: $icon-color;
+  color: $icon-color;
 }
+
 .btn-toolbar > .btn-group {
   text-align: center;
   padding-right: 10px;
@@ -112,8 +137,8 @@ color: $icon-color;
 }
 
 .badge {
-background-color: $badge-color;
-  position:absolute;
+  background-color: $badge-color;
+  position: absolute;
   right: -1px;
   top: -10px;
   font-size: 11px;
@@ -128,11 +153,13 @@ background-color: $badge-color;
   background-color: $black;
   margin-bottom: 40px;
 }
+
 .section {
   width: 100%;
 
 }
-.section-name {
+
+.section-name, .section-name-bottom {
   display: inline-block;
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
@@ -143,12 +170,15 @@ background-color: $badge-color;
   margin-top: 50px;
   border-bottom: double 4px $supernav-border;
 }
+
 .section-p {
   font-family: Aleo-regular;
   color: $supernav-text;
   display: block;
   margin: 0 auto;
+  font-size: 18px;
 }
+
 @font-face {
   font-family: Aleo-regular; /* ָלÿ רנטפעא */
   src: url("../fonts/aleo-regular.woff"); /* ֿףעü ך פאיכף סמ רנטפעמל */
@@ -164,10 +194,204 @@ background-color: $badge-color;
   height: 100px;
   width: 100%;
   background-color: $price-color;
+  position: relative;
 }
 
 .add-to-cart {
   height: 40px;
   width: 100%;
   background-color: $add-to-cart-color;
+  span {
+    line-height: 40px;
+    text-align: center;
+    color: $white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+  }
+}
+
+.goods-name, .links-head {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 18px;
+  color: $goods-name;
+}
+
+.line {
+  height: 1px;
+  width: 100px;
+  background-color: $goods-line;
+  margin: 5px auto;
+}
+
+.goods-price > span {
+  color: $white;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  &:before {
+    content: "$ ";
+    font-size: 19px;
+    vertical-align: 5%;
+  }
+}
+
+.goods-info {
+  margin: auto;
+  position: absolute;
+  height: 50%;
+  top: -15px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.section-bottom {
+  height: 525px;
+  width: 100%;
+  background-image: url("../img/bg.png");
+  border-bottom: 1px solid $supernav-border;
+}
+
+.section-name-bottom {
+  background-color: $bottom-background;
+  border-bottom: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: $white;
+  margin-top: 30px;
+  font-size: 40px;
+  line-height: 1.3em;
+}
+
+.input-adress {
+  display: block;
+  margin: 40px auto;
+  padding: 5px 10px;
+  width: 200px;
+  text-align: center;
+}
+
+@include placeholder-style() {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+}
+
+.left-inner-addon {
+  position: relative;
+  i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+    left: 40px;
+    top: -5px;
+    color: $bottom-background;
+  }
+}
+
+.radius, .change-miles {
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+}
+
+.radius {
+  text-transform: uppercase;
+  color: $radius-text;
+}
+
+.change-miles {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: $section-name-color;
+  width: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+label {
+  position: relative;
+  background: transparent;
+}
+
+label:after {
+  content: '\25C0 \25B6';
+  font: 14px "Oswald", monospace;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: -14px;
+  top: 7px;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none;
+  color: $section-name-color;
+}
+
+.find-store {
+  background-color: $find-store;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  margin: 40px auto;
+  span {
+    color: $white;
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    line-height: 50px;
+  }
+}
+
+.footer-description {
+  display: inline-block;
+  width: auto;
+  h1 {
+    font-family: Aleo-regular;
+    text-transform: uppercase;
+  }
+  p {
+    color: $supernav-text;
+    display: inline-block;
+    width: 60%;
+
+  }
+}
+
+.links-head {
+  margin: 20px 0;
+}
+
+.links-ul li {
+  padding: 10px 0;
+
+  a {
+    font-family: Oswald, sans-serif;
+    color: $goods-name;
+    font-size: 15px;
+  }
+
+}
+.footer-social {
+  font-size: 30px;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  .footer-social-row {
+    margin:10px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    i {
+    color: $social-color;
+  }
+  }
+
+}
+
+.form-control {
+  border-radius: 0;
 }
