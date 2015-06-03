@@ -451,13 +451,27 @@ font-size: 15px;
   margin-top: 30px;
   font-size: 40px;
   line-height: 1.3em;
+  width: 100%;
+}
+
+.footer__zip {
+  position: relative;
+  width: 200px;
+  text-align: center;
+  i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+    left: 0;
+    top: -5px;
+    color: $bottom-background-color;
+  }
 }
 
 .footer__zip-input {
   display: block;
   margin: 40px auto;
   padding: 5px 10px;
-  width: 200px;
   text-align: center;
   border-radius: 0;
 }
@@ -465,18 +479,6 @@ font-size: 15px;
 @include placeholder-style() {
   font-family: 'Oswald Light', sans-serif;
   font-size: 18px;
-}
-
-.footer__zip {
-  position: relative;
-  i {
-    position: absolute;
-    padding: 10px 12px;
-    pointer-events: none;
-    left: 65px;
-    top: -5px;
-    color: $bottom-background-color;
-  }
 }
 
 .footer__radius, .change-miles {
@@ -712,4 +714,12 @@ a[aria-expanded="true"] {
 .line-through-price {
   text-decoration: line-through;
   color: $white;
+}
+
+.nav > li > a {
+  padding: 5px 10px;
+}
+
+.svg-figure {
+  display: none;
 }

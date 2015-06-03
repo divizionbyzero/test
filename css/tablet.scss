@@ -1,0 +1,92 @@
+@import "main";
+
+$svg-color: #f52c66;
+
+@media screen and (min-width: 600px) {
+
+  .product {
+    width: 48%;
+    height: auto;
+  }
+  .twice {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+
+  .footer__zip {
+    width: 80%;
+    i {
+      top: 0;
+    }
+  }
+  .footer__zip-input {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .links-head {
+    display: none;
+  }
+
+  .footer__description {
+    float: left;
+    margin-left: -4%;
+  }
+
+  .links-ul {
+    float: right;
+    width: 40%;
+    margin-right: 5%;
+    margin-top: 15px;
+    li {
+      text-align: right;
+    }
+  }
+
+  .footer__social {
+    width: 50%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    &.col-xs-offset-1 {
+      margin-left: 18%;
+    }
+  }
+
+  .footer__social-row {
+    width: 50%;
+  }
+
+  .nav-tabs {
+    float: left !important;
+    margin-left: 3%;
+  }
+
+  .svg-inner {
+    // position: relative;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    .svg-figure {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      width: 200px;
+      height: 60px;
+      fill: $svg-color;
+      z-index: -1;
+      &:active {
+        z-index: 2;
+      }
+    }
+    i {
+      position: absolute;
+      right: 112px;
+      top: 33px;
+      z-index: 3;
+      color: $white;
+      font-size: 15px;
+    }
+  }
+}
