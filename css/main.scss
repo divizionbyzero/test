@@ -12,8 +12,8 @@ $section-name-color: #434343;
 $navigation-border: #333333;
 $black: black;
 $badge-color: #e13f56;
-$new-color: #f45281;
-$sale-color: #7f446e;
+$sale-color: #f45281;
+$new-color: #7f446e;
 $social-color: #12cce2;
 $add-to-cart-color: #2fb789;
 $find-store: #167c9a;
@@ -60,23 +60,45 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
   src: url("../fonts/oswald-light-webfont.woff");
 }
 
-.aleo-font, .content__section-view-all, .slide-title {
+@font-face {
+  font-family: nexa_boldregular;
+  src: url('../fonts/Nexa_Free_Bold-webfont.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ionicons;
+  src: url('../fonts/ionicons.woff');
+}
+
+.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a {
   font-family: Aleo-regular;
 }
 
 .oswald-light-font, .product__add-to-cart span, .content__section-name, .footer__top-name,
-h4.panel-title > a, .panel-body > ul > li > a {
+h4.panel-title > a, .panel-body > ul > li > a, {
   font-family: "Oswald Light", sans-serif;
 }
 
 .oswald-regular-font, .product__name, .links-head, .product__price span, .footer__radius,
-.change-miles, .footer__find-store span, .links-ul li a, .slider-button > a {
+.change-miles, .footer__find-store span, .links-ul li a, .slider-button > a, #tab-2 > a, .new > span, .sale > span,  .sale-price > span {
   font-family: 'Oswald', sans-serif;
 }
 
-.nexa-font {
-
+#tab-1, #tab-2 {
+  text-transform: uppercase;
 }
+
+#tab-1 {
+  font-weight: 900;
+}
+
+#tab-3 > a {
+  font-family: nexa_boldregular, serif;
+font-size: 15px;
+}
+
 
 .nav-tabs {
   text-align: center;
@@ -86,6 +108,7 @@ h4.panel-title > a, .panel-body > ul > li > a {
     position: relative;
     float: none;
     display: inline-block;
+    bottom: -1px;
     *display: inline; /* ie7 fix */
     zoom: 1; /* hasLayout ie7 trigger */
     &:first-of-type, &:last-of-type {
@@ -95,7 +118,7 @@ h4.panel-title > a, .panel-body > ul > li > a {
     &:hover {
       position: relative;
       //top: 0px;
-      bottom: -1px;
+
       border-right: 2px solid $upper-border-color;
       border-left: 2px solid $upper-border-color;
       background-color: $white;
@@ -112,6 +135,10 @@ h4.panel-title > a, .panel-body > ul > li > a {
 
 .header {
   position: relative;
+}
+
+.nav-tabs > li.active > a {
+
 }
 
 .nav > li > a:hover {
@@ -289,7 +316,8 @@ h4.panel-title > a, .panel-body > ul > li > a {
   &:before {
     content: "\003C";
     font-size: 80px;
-    color: $black;
+    font-weight: 100;
+    color: $white;
   }
 }
 
@@ -301,8 +329,9 @@ h4.panel-title > a, .panel-body > ul > li > a {
   line-height: 290px;
   &:before {
     content: "\003E";
+    font-weight: 100;
     font-size: 80px;
-    color: $black;
+    color: $white;
   }
 }
 
@@ -383,7 +412,10 @@ h4.panel-title > a, .panel-body > ul > li > a {
   margin: 5px auto;
 }
 
-.product__price > span {
+.product__price {
+  display: inline-block;
+}
+.product__price > span, .sale-price > span {
   color: $white;
   font-size: 20px;
   &:before {
@@ -551,21 +583,26 @@ label:after {
 }
 
 .new {
-  background-color: $new-color;
+  background-color: transparentize($new-color,.2);
 }
 
 .sale {
-  background-color: $sale-color;
+  background-color: transparentize($sale-color,.2);
 }
 
 .new, .sale {
   margin: auto;
   position: absolute;
-  width: 0%;
+  width: 100%;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
+  span {
+    line-height: 40px;
+    color: $white;
+    text-transform: uppercase;
+  }
 }
 
 .header__navigation {
@@ -633,4 +670,46 @@ a[aria-expanded="true"] {
   //line-height: 37px!important;
   background-color: $upper-background-color !important;
   color: $navigation-border !important;
+}
+
+.nav-tabs > li > a {
+  margin: 0;
+  border-radius: 0;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+
+.panel-default {
+  border:none;
+}
+
+.panel-group.header__navigation.collapse.in {
+  border-bottom: none;
+}
+
+.panel-body > ul > li.noticeable, .panel-body > ul > li.noticeable > a  {
+  background-color: $white !important;
+}
+.panel-body > ul > li.noticeable > a {
+  border: none;
+  line-height: 40px;
+  color: $black;
+  font-family: nexa_boldregular, serif;
+  margin-left: 20px;
+  text-transform: none;
+}
+
+.sale-price {
+  display: inline;
+}
+
+.sale-price > span {
+  color: $sale-color;
+}
+
+.line-through-price {
+  text-decoration: line-through;
+  color: $white;
 }
