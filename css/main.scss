@@ -215,14 +215,7 @@ font-size: 15px;
   zoom: 1;
 }
 
-/* Slider */
 .slider {
-  ///* Ширина контейнера */
-  //width: 360px;
-  ///* Внешние тступы сверху и снизу */
-  //margin: 50px auto;
-  ///* Внутренние отступы для ссылок navy */
-  //padding: 0 30px;
   position: relative;
   overflow: hidden;
   padding: 0;
@@ -244,6 +237,7 @@ font-size: 15px;
   position: relative;
   margin: 0;
   padding: 0;
+  background-color: $black;
 }
 
 .slide-wrap {
@@ -255,13 +249,10 @@ font-size: 15px;
 }
 
 .slide-item {
-  /* Ширина слайда */
-  width: 360px;
-  /* Внутренние отступы */
-  // padding: 10px;
-  /* Обтекание */
-  height: 290px;
   float: left;
+  margin-right: 10000px;
+  width: 360px;
+  height: 290px;
   img {
     width: 100%;
     height: 100%;
@@ -289,7 +280,9 @@ font-size: 15px;
   background-color: $black;
   text-align: center;
   top: 160px;
-  left: 90px;
+  left: 50%;
+  margin-left: -75px;
+  z-index: 2;
   a {
     line-height: 45px;
     color: $white;
@@ -449,7 +442,7 @@ font-size: 15px;
 }
 
 .footer__top-name {
-  background-color: $bottom-background-color;
+  background-color: transparentize($social-color,.5);
   border-bottom: none;
   padding-top: 30px;
   padding-bottom: 30px;

@@ -42,7 +42,8 @@
 
   ul.links-ul {
     width: 100%;
-
+    float: right;
+    margin-right: 0;
     li {
       display: inline-block;
       margin-left: 6%;
@@ -60,12 +61,15 @@
   .links-and-social-icons {
     width: 55%;
     float: right;
+    margin-right: 8.33%;
   }
 
   .footer__social.col-xs-offset-1 {
-    margin-left: 0;}
+    margin-left: 0;
+  float: right;
+  }
   .footer__social {
-    width: 85%;
+    width: 65%;
     padding: 0;
   }
 }
