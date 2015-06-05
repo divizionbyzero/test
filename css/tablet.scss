@@ -1,6 +1,9 @@
 @import "main";
 
 $svg-color: #f52c66;
+$submenu-header-color: #343434;
+$almost-white: #f6f6f6;
+$li-notiaceble: #62214e;
 
 @media screen and (min-width: 600px) {
 
@@ -67,6 +70,7 @@ $svg-color: #f52c66;
     display: inline-block;
     width: 200px;
     text-align: center;
+
     .svg-figure {
       display: inline-block;
       position: absolute;
@@ -88,5 +92,105 @@ $svg-color: #f52c66;
       color: $white;
       font-size: 15px;
     }
+    span {
+      color: $white;
+      position: absolute;
+      right: 30px;
+      top: 7px;
+      font-size: 17px;
+      z-index: -1;
+    }
+  }
+  .new, .sale {
+    display: none;
+  }
+
+  .transition {
+    transition: 1s;
+  }
+
+  .hover-text {
+    position: absolute;
+    display: block;
+    bottom: 140px;
+    background-color: transparentize($black, .5);
+    height: 140px;
+    width: 100%;
+    padding: 10px 25px;
+    opacity: 0;
+    span {
+      display: block;
+      position: absolute;
+      width: 90%;
+      color: $white;
+      text-align: left;
+    }
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
+  .tablet-submenu-open {
+    width: 99%;
+    display: flex;
+    flex-flow: row nowrap;
+    border: 2px solid $navigation-border;
+
+  }
+  .panel-tablet {
+    width: 33.3%;
+    border-right: 1px solid $upper-border-color;
+  }
+
+  .panel-group {
+    margin-bottom: 0;
+
+  }
+  .panel-default > .panel-heading {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    // border-bottom: 1px solid $upper-border-color;
+    background-color: $upper-background-color;
+    color: $submenu-header-color;
+    border-radius: 0;
+  }
+  .tablet-collapse-in {
+    display: block;
+  }
+  .panel-body > ul > li {
+    background-color: $almost-white;
+  }
+  .panel-body ul li a {
+    background-color: $almost-white !important;
+    border: none;
+    color: $submenu-header-color;
+    font-family: Aleo-regular;
+    text-transform: none;
+  }
+  .panel-body > ul > li.noticeable, .panel-body > ul > li.noticeable > a {
+    background-color: $li-notiaceble !important;
+    color: $white;
+    line-height: 37px;
+  }
+
+  .content__section-name {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn-toolbar.pull-right{
+    display: none;
+  }
+.navbar-style {
+font-size: 17px;
+  li:hover {
+    background-color: $find-store;
+  }
+}
+  .navbar-default .navbar-nav > li > a:hover {
+    color: $white;
   }
 }

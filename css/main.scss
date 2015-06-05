@@ -72,12 +72,12 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
   src: url('../fonts/ionicons.woff');
 }
 
-.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a {
+.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, .svg-inner > span,  .hover-text > span {
   font-family: Aleo-regular;
 }
 
 .oswald-light-font, .product__add-to-cart span, .content__section-name, .footer__top-name,
-h4.panel-title > a, .panel-body > ul > li > a, {
+h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
   font-family: "Oswald Light", sans-serif;
 }
 
@@ -397,6 +397,12 @@ font-size: 15px;
   }
 }
 
+.product__add-to-cart:hover {
+  background-color: $navigation-border;
+  transition: 1s;
+  cursor: pointer;
+}
+
 .product__name, .links-head {
   display: inline-block;
   text-transform: uppercase;
@@ -692,7 +698,7 @@ a[aria-expanded="true"] {
 }
 
 .panel-body > ul > li.noticeable, .panel-body > ul > li.noticeable > a  {
-  background-color: $white !important;
+  background-color: $white;
 }
 .panel-body > ul > li.noticeable > a {
   border: none;
@@ -721,5 +727,14 @@ a[aria-expanded="true"] {
 }
 
 .svg-figure {
+  display: none;
+}
+
+.hover-text {
+  display:none;
+  //opacity: (.5);
+}
+
+.svg-inner {
   display: none;
 }

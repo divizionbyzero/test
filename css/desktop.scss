@@ -1,0 +1,71 @@
+@import "main";
+@import "tablet";
+
+@media screen and (min-width: 800px) {
+
+  .product {
+    width: 200px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .fourfold {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+  .new, .sale {
+    display: block;
+  }
+
+  .content__section-name {
+    width: auto;
+    border: none;
+    position: relative;
+    display: inline-block;
+    padding-left: 200px;
+    padding-right: 200px;
+    &:before, &:after {
+      content: "";
+      width: 30%;
+      border-top: double 4px $upper-border-color;
+      position: absolute;
+      right: 70%;
+      top: 50%;
+      margin-top: -15px;
+    }
+    &:after {
+      left: 70%;
+    }
+  }
+
+  ul.links-ul {
+    width: 100%;
+
+    li {
+      display: inline-block;
+      margin-left: 6%;
+      float: right;
+      a {
+        font-family: "Oswald Light";
+
+      }
+    }
+  }
+  .footer__description {
+    margin-left: 0;
+  }
+
+  .links-and-social-icons {
+    width: 55%;
+    float: right;
+  }
+
+  .footer__social.col-xs-offset-1 {
+    margin-left: 0;}
+  .footer__social {
+    width: 85%;
+    padding: 0;
+  }
+}
