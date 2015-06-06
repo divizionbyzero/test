@@ -13,7 +13,7 @@
 @font-face {
   font-family: ionicons;
   src: url("../fonts/ionicons.woff"); }
-.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, .svg-inner > span, .hover-text > span {
+.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, #hexagon > span, .hover-text > span {
   font-family: Aleo-regular; }
 
 .oswald-light-font, .product__add-to-cart span, .content__section-name, .footer__top-name,
@@ -603,7 +603,7 @@ a[aria-expanded="true"] {
 @font-face {
   font-family: ionicons;
   src: url("../fonts/ionicons.woff"); }
-.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, .svg-inner > span, .hover-text > span {
+.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, #hexagon > span, .hover-text > span {
   font-family: Aleo-regular; }
 
 .oswald-light-font, .product__add-to-cart span, .content__section-name, .footer__top-name,
@@ -1231,31 +1231,38 @@ a[aria-expanded="true"] {
     display: inline-block;
     width: 200px;
     text-align: center; }
-    .svg-inner .svg-figure {
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      right: 20px;
-      width: 200px;
-      height: 60px;
-      fill: #f52c66;
-      z-index: -1; }
-      .svg-inner .svg-figure:active {
-        z-index: 2; }
     .svg-inner i {
       position: absolute;
-      right: 112px;
+      right: 132px;
       top: 33px;
-      z-index: 3;
       color: white;
-      font-size: 15px; }
+      font-size: 15px;
+      z-index: 2; }
     .svg-inner span {
       color: white;
-      position: absolute;
-      right: 30px;
-      top: 7px;
-      font-size: 17px;
-      z-index: -1; }
+      font-size: 16px;
+      line-height: 35px; }
+
+  #hexagon {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 200px;
+    height: 35px;
+    background: #f52c66;
+    text-align: center; }
+
+  #hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 25px solid #f52c66; }
 
   .new, .sale {
     display: none; }

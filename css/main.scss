@@ -72,7 +72,7 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
   src: url('../fonts/ionicons.woff');
 }
 
-.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, .svg-inner > span,  .hover-text > span {
+.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, #hexagon > span,  .hover-text > span {
   font-family: Aleo-regular;
 }
 
@@ -476,7 +476,7 @@ font-size: 15px;
     padding: 10px 12px;
     pointer-events: none;
     left: 2px;
-    
+
     top: -5px;
     color: $bottom-background-color;
   }
