@@ -7,6 +7,7 @@ $li-notiaceble: #62214e;
 
 @media screen and (min-width: 600px) {
 
+
   .product {
     width: 48%;
     height: auto;
@@ -15,8 +16,16 @@ $li-notiaceble: #62214e;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    &:nth-last-of-type(n+2){
+      display: none;
+    }
   }
-
+.fourfold{
+display: block;
+&:nth-last-of-type(n+2) {
+  display: none;
+}
+}
   .footer__zip {
     width: 80%;
     i {
@@ -65,49 +74,6 @@ $li-notiaceble: #62214e;
     margin-left: 3%;
   }
 
-  .svg-inner {
-    // position: relative;
-    display: inline-block;
-    width: 200px;
-    text-align: center;
-
-
-    i {
-      position: absolute;
-      right: 132px;
-      top: 33px;
-      color: $white;
-      font-size: 15px;
-      z-index: 2;
-    }
-    span {
-      color: $white;
-      font-size: 16px;
-      line-height: 35px;
-    }
-  }
-
-  #hexagon {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 40px;
-    width: 200px;
-    height: 35px;
-    background: $svg-color;
-    text-align: center;
-  }
-  #hexagon:after {
-    content: "";
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-top: 25px solid $svg-color;
-  }
   .new, .sale {
     display: none;
   }
@@ -144,6 +110,9 @@ $li-notiaceble: #62214e;
     display: flex;
     flex-flow: row nowrap;
     border: 2px solid $navigation-border;
+    .panel-default > .panel-heading {
+      border: none;
+    }
 
   }
   .panel-tablet {
@@ -171,14 +140,14 @@ $li-notiaceble: #62214e;
     background-color: $almost-white;
   }
   .panel-body ul li a {
-    background-color: $almost-white !important;
+    background-color: $almost-white;
     border: none;
     color: $submenu-header-color;
     font-family: Aleo-regular;
     text-transform: none;
   }
   .panel-body > ul > li.noticeable, .panel-body > ul > li.noticeable > a {
-    background-color: $li-notiaceble !important;
+    background-color: $li-notiaceble;
     color: $white;
     line-height: 37px;
   }
@@ -195,6 +164,24 @@ $li-notiaceble: #62214e;
     width: 300px;
     margin-left: 0;
   }
+  .tablet-submenu-open > .panel-default > .panel-heading {
+    background-color: $upper-background-color;
+    color: $navigation-background-1;
+    a {
+      padding-left: 20px;
+    }
+  }
+  .panel-body > ul > li.noticeable > a {
+    margin-left: 0;
+  }
+  .panel-body ul > li > a {
+    display: inline;
+    padding: 5px 20px;
+   // line-height: normal;
+    &:hover {
+      background-color: $navigation-border;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -209,5 +196,49 @@ font-size: 17px;
 }
   .navbar-default .navbar-nav > li > a:hover {
     color: $white;
+  }
+
+  .svg-inner {
+     position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+
+
+    i {
+      position: absolute;
+      right: 132px;
+      top: 33px;
+      color: $white;
+      font-size: 15px;
+      z-index: 3;
+    }
+    span {
+      color: $white;
+      font-size: 16px;
+      line-height: 35px;
+    }
+  }
+
+  #hexagon {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 200px;
+    height: 35px;
+    background: $svg-color;
+    text-align: center;
+  }
+  #hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 25px solid $svg-color;
   }
 }

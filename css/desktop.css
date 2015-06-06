@@ -495,7 +495,7 @@ label:after {
   overflow: visible;
   background-color: #fff;
   border: 1px solid #ddd;
-  top: 187px;
+  top: 180px;
   width: 100%; }
 
 .panel-body {
@@ -504,22 +504,22 @@ label:after {
 .panel-body ul > li > a {
   display: block;
   line-height: 37px;
-  margin-left: 15px;
-  padding-left: 5px;
-  background-color: #333333 !important; }
+  padding-left: 20px;
+  border-radius: 0;
+  border: 2px solid #333333;
+  color: white;
+  font-size: 16px;
+  background-color: #333333; }
   .panel-body ul > li > a:hover {
-    background-color: black !important;
+    background-color: black;
     color: white; }
 
-.panel-default > .panel-heading, .panel-body ul li a {
+.tablet-submenu-open > .panel-default > .panel-heading {
   border-radius: 0;
   border: 2px solid #333333;
   background-color: #787878;
   color: white;
   font-size: 16px; }
-
-.panel-body > ul > li {
-  background-color: #333333; }
 
 .panel-body ul {
   margin-top: -3px;
@@ -588,6 +588,23 @@ a[aria-expanded="true"] {
 
 .svg-inner {
   display: none; }
+
+.fourfold {
+  display: block; }
+  .fourfold:nth-last-of-type(n+2) {
+    display: none; }
+
+.flex-display {
+  display: flex !important; }
+
+.block-display {
+  display: block !important; }
+
+.none-display {
+  display: none !important; }
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #282828; }
 
 @font-face {
   font-family: Aleo-regular;
@@ -1085,7 +1102,7 @@ label:after {
   overflow: visible;
   background-color: #fff;
   border: 1px solid #ddd;
-  top: 187px;
+  top: 180px;
   width: 100%; }
 
 .panel-body {
@@ -1094,22 +1111,22 @@ label:after {
 .panel-body ul > li > a {
   display: block;
   line-height: 37px;
-  margin-left: 15px;
-  padding-left: 5px;
-  background-color: #333333 !important; }
+  padding-left: 20px;
+  border-radius: 0;
+  border: 2px solid #333333;
+  color: white;
+  font-size: 16px;
+  background-color: #333333; }
   .panel-body ul > li > a:hover {
-    background-color: black !important;
+    background-color: black;
     color: white; }
 
-.panel-default > .panel-heading, .panel-body ul li a {
+.tablet-submenu-open > .panel-default > .panel-heading {
   border-radius: 0;
   border: 2px solid #333333;
   background-color: #787878;
   color: white;
   font-size: 16px; }
-
-.panel-body > ul > li {
-  background-color: #333333; }
 
 .panel-body ul {
   margin-top: -3px;
@@ -1179,6 +1196,23 @@ a[aria-expanded="true"] {
 .svg-inner {
   display: none; }
 
+.fourfold {
+  display: block; }
+  .fourfold:nth-last-of-type(n+2) {
+    display: none; }
+
+.flex-display {
+  display: flex !important; }
+
+.block-display {
+  display: block !important; }
+
+.none-display {
+  display: none !important; }
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #282828; }
+
 @media screen and (min-width: 600px) {
   .product {
     width: 48%;
@@ -1188,6 +1222,13 @@ a[aria-expanded="true"] {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around; }
+    .twice:nth-last-of-type(n+2) {
+      display: none; }
+
+  .fourfold {
+    display: block; }
+    .fourfold:nth-last-of-type(n+2) {
+      display: none; }
 
   .footer__zip {
     width: 80%; }
@@ -1227,43 +1268,6 @@ a[aria-expanded="true"] {
     float: left !important;
     margin-left: 3%; }
 
-  .svg-inner {
-    display: inline-block;
-    width: 200px;
-    text-align: center; }
-    .svg-inner i {
-      position: absolute;
-      right: 132px;
-      top: 33px;
-      color: white;
-      font-size: 15px;
-      z-index: 2; }
-    .svg-inner span {
-      color: white;
-      font-size: 16px;
-      line-height: 35px; }
-
-  #hexagon {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 40px;
-    width: 200px;
-    height: 35px;
-    background: #f52c66;
-    text-align: center; }
-
-  #hexagon:after {
-    content: "";
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-top: 25px solid #f52c66; }
-
   .new, .sale {
     display: none; }
 
@@ -1295,6 +1299,8 @@ a[aria-expanded="true"] {
     display: flex;
     flex-flow: row nowrap;
     border: 2px solid #333333; }
+    .tablet-submenu-open .panel-default > .panel-heading {
+      border: none; }
 
   .panel-tablet {
     width: 33.3%;
@@ -1318,14 +1324,14 @@ a[aria-expanded="true"] {
     background-color: #f6f6f6; }
 
   .panel-body ul li a {
-    background-color: #f6f6f6 !important;
+    background-color: #f6f6f6;
     border: none;
     color: #343434;
     font-family: Aleo-regular;
     text-transform: none; }
 
   .panel-body > ul > li.noticeable, .panel-body > ul > li.noticeable > a {
-    background-color: #62214e !important;
+    background-color: #62214e;
     color: white;
     line-height: 37px; }
 
@@ -1339,7 +1345,22 @@ a[aria-expanded="true"] {
     text-align: left;
     left: 50vw;
     width: 300px;
-    margin-left: 0; } }
+    margin-left: 0; }
+
+  .tablet-submenu-open > .panel-default > .panel-heading {
+    background-color: #e9e9e9;
+    color: #787878; }
+    .tablet-submenu-open > .panel-default > .panel-heading a {
+      padding-left: 20px; }
+
+  .panel-body > ul > li.noticeable > a {
+    margin-left: 0; }
+
+  .panel-body ul > li > a {
+    display: inline;
+    padding: 5px 20px; }
+    .panel-body ul > li > a:hover {
+      background-color: #333333; } }
 @media screen and (min-width: 768px) {
   .btn-toolbar.pull-right {
     display: none; }
@@ -1350,12 +1371,53 @@ a[aria-expanded="true"] {
       background-color: #167c9a; }
 
   .navbar-default .navbar-nav > li > a:hover {
-    color: white; } }
+    color: white; }
+
+  .svg-inner {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0; }
+    .svg-inner i {
+      position: absolute;
+      right: 132px;
+      top: 33px;
+      color: white;
+      font-size: 15px;
+      z-index: 3; }
+    .svg-inner span {
+      color: white;
+      font-size: 16px;
+      line-height: 35px; }
+
+  #hexagon {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 200px;
+    height: 35px;
+    background: #f52c66;
+    text-align: center; }
+
+  #hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 25px solid #f52c66; } }
 @media screen and (min-width: 800px) {
   .product {
     width: 200px;
     margin-right: 10px;
     margin-left: 10px; }
+
+  .twice:nth-last-of-type(n+2) {
+    display: flex; }
 
   .fourfold {
     display: flex;

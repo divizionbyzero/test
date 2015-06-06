@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/desktop.css">
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/slider.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/slider.js"></script>
 </head>
 <body>
 
-<div class="header">
+<div class="header clearfix">
     <div class="header__upper-navigation col-xs-12">
         <ul class="nav nav-tabs">
             <li class="active" id="tab-1"><a href="index.html">Unishop</a>
@@ -22,15 +22,18 @@
             <li id="tab-3"><a href="#">RockStar's</a>
         </ul>
     </div>
-<div class="svg-inner">
-    <i class="glyphicon glyphicon-star"></i>
-    <div id="hexagon">
-        <span>Super new stuff is here!</span>
+    <div class="svg-inner">
+        <i class="glyphicon glyphicon-star"></i>
+
+        <div id="hexagon">
+            <span>Super new stuff is here!</span>
+        </div>
     </div>
-</div>
     <div class="header__logo">
-        <img class="header__logo-top" src="img/logo-black.png">
-        <img class="header__logo-bottom" src="img/logo-gray.png">
+        <a href="index.html">
+            <img class="header__logo-top" src="img/logo-black.png">
+            <img class="header__logo-bottom" src="img/logo-gray.png">
+        </a>
     </div>
 
     <div class="navigation col-xs-12 navbar navbar-default" role="navigation">
@@ -43,69 +46,69 @@
         </button>
         <ul class="nav navbar-nav navbar-left collapse navbar-collapse navbar-style" data-toggle="collapse"
             data-target="#accordion">
-             <li><a href="#">Women</a></li>
-             <li><a href="#">Men</a></li>
-             <li><a href="#">Children</a></li>
-             <li><a href="#">Sale</a></li>
-             <li><a href="#">Contact</a></li>
-             <li><a href="#">Locator</a></li>
-         </ul>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Children</a></li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Locator</a></li>
+        </ul>
 
         <div class="btn-toolbar pull-right" role="toolbar">
             <div class="btn-group"><i class="glyphicon glyphicon-user"></i></div>
             <div class="btn-group"><i class="glyphicon glyphicon-shopping-cart"></i><span class="badge">5</span></div>
         </div>
     </div>
-    <div id="accordion" class="panel-group collapse header__navigation tablet-submenu">
+    <div id="accordion" class="panel-group collapse header__navigation tablet-submenu clearfix">
         <div class="tablet-submenu-open">
-        <div class="panel panel-default panel-tablet">
-            <div class="panel-heading accordion-toggle">
-                <h4 class="panel-title">
-                    <a href="#collapse-1" data-parent="#accordion" data-toggle="collapse">search</a>
-                </h4>
-            </div>
-            <div id="collapse-1" class="panel-collapse collapse tablet-collapse-in">
-                <div class="panel-body">
-                    <ul>
-                        <li><a href="#">blabla1</a></li>
-                        <li><a href="#">blabla2</a></li>
-                        <li><a href="#">blabla3</a></li>
-                    </ul>
+            <div class="panel panel-default panel-tablet">
+                <div class="panel-heading accordion-toggle">
+                    <h4 class="panel-title">
+                        <a href="#collapse-1" data-parent="#accordion" data-toggle="collapse">search</a>
+                    </h4>
+                </div>
+                <div id="collapse-1" class="panel-collapse collapse tablet-collapse-in">
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="#">blabla1</a></li>
+                            <li><a href="#">blabla2</a></li>
+                            <li><a href="#">blabla3</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="panel panel-default panel-tablet">
-            <div class="panel-heading accordion-toggle">
-                <h4 class="panel-title">
-                    <a href="#collapse-2" data-parent="#accordion" data-toggle="collapse">shop by brands</a>
-                </h4>
-            </div>
-            <div id="collapse-2" class="panel-collapse collapse tablet-collapse-in">
-                <div class="panel-body">
-                    <ul>
-                        <li><a href="#">blabla1</a></li>
-                        <li class="noticeable"><a href="#">blabla2</a></li>
-                        <li><a href="#">blabla3</a></li>
-                    </ul>
+            <div class="panel panel-default panel-tablet">
+                <div class="panel-heading accordion-toggle">
+                    <h4 class="panel-title">
+                        <a href="#collapse-2" data-parent="#accordion" data-toggle="collapse">shop by brands</a>
+                    </h4>
+                </div>
+                <div id="collapse-2" class="panel-collapse collapse tablet-collapse-in">
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="#">blabla1</a></li>
+                            <li class="noticeable"><a href="#">blabla2</a></li>
+                            <li><a href="#">blabla3</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="panel panel-default panel-tablet">
-            <div class="panel-heading accordion-toggle">
-                <h4 class="panel-title">
-                    <a href="#collapse-3" data-parent="#accordion" data-toggle="collapse">promotions</a>
-                </h4>
-            </div>
-            <div id="collapse-3" class="panel-collapse collapse tablet-collapse-in">
-                <div class="panel-body">
-                    <ul>
-                        <li><a href="#">blabla1</a></li>
-                        <li><a href="#">blabla2</a></li>
-                        <li><a href="#">blabla3</a></li>
-                    </ul>
+            <div class="panel panel-default panel-tablet">
+                <div class="panel-heading accordion-toggle">
+                    <h4 class="panel-title">
+                        <a href="#collapse-3" data-parent="#accordion" data-toggle="collapse">promotions</a>
+                    </h4>
+                </div>
+                <div id="collapse-3" class="panel-collapse collapse tablet-collapse-in">
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="#">blabla1</a></li>
+                            <li><a href="#">blabla2</a></li>
+                            <li><a href="#">blabla3</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
         </div>
 
@@ -118,10 +121,12 @@
                 <div class="slide-item">
                     <!--<img src="img/img-1.jpg" alt=""/>-->
                     <span class="slide-title">Gentlemen, this way please</span>
-<div class="slide-item-1"> </div>
+
+                    <div class="slide-item-1"></div>
                 </div>
                 <div class="slide-item">
                     <span class="slide-title">StoReSmart solution</span>
+
                     <div class="slide-item-2">
                     </div>
                     <!--<img src="img/img-2.jpg" alt=""/>-->
@@ -139,157 +144,321 @@
 <div class="content">
     <div class="content__section">
         <div class="text-center"><h2 class="content__section-name">Popular products</h2>
-            <a href="#" class="content__section-view-all">View all</a></div>
-<div class="fourfold">
-        <div class="twice">
-        <div class="product text-center">
-            <div class="hover-text transition">
+            <a href="#" class="content__section-view-all" onclick="return false;">View all</a></div>
+        <div class="fourfold">
+            <div class="twice">
+                <div class="product text-center">
+                    <div class="hover-text transition">
                 <span>
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
-            </div>
-            <img src="img/1.jpg">
-            <div class="new"><span>NEW</span></div>
-            <div class="product__description">
-                <div class="product__info-wrapper">
-                    <div class="product__name">Leather hightops</div>
-                    <div class="line"></div>
-                    <div class="product__price"><span>65.07</span></div>
-                </div>
-            </div>
-            <div class="product__add-to-cart"><span>Add to cart</span></div>
-        </div>
-        <div class="product text-center">
-            <div class="hover-text transition">
-                <span>
-                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                </span>
-            </div>
-            <img src="img/2.jpg">
-            <div class="sale"><span>SALE</span></div>
-            <div class="product__description">
-                <div class="product__info-wrapper">
-                    <div class="product__name">Leather hightops</div>
-                    <div class="line"></div>
-                    <div class="product__price line-through-price"><span>65.07</span></div>
-                    <div class="sale-price"><span>16.99</span></div>
-                </div>
-            </div>
-            <div class="product__add-to-cart"><span>Add to cart</span></div>
-        </div>
-        </div>
+                    </div>
+                    <img src="img/1.jpg">
 
-       <div class="twice">
-        <div class="product text-center">
-            <div class="hover-text transition">
+                    <div class="new"><span>NEW</span></div>
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+                <div class="product text-center">
+                    <div class="hover-text transition">
                 <span>
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
-            </div>
-            <img src="img/3.jpg">
-            <div class="product__description">
-                <div class="product__info-wrapper">
-                    <div class="product__name">Leather hightops</div>
-                    <div class="line"></div>
-                    <div class="product__price"><span>65.07</span></div>
+                    </div>
+                    <img src="img/2.jpg">
+
+                    <div class="sale"><span>SALE</span></div>
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price line-through-price"><span>65.07</span></div>
+                            <div class="sale-price"><span>16.99</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
                 </div>
             </div>
-            <div class="product__add-to-cart"><span>Add to cart</span></div>
-        </div>
-        <div class="product text-center">
-            <div class="hover-text transition">
+
+            <div class="twice">
+                <div class="product text-center">
+                    <div class="hover-text transition">
                 <span>
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
-            </div>
-            <img src="img/4.jpg">
-            <div class="product__description">
-                <div class="product__info-wrapper">
-                    <div class="product__name">Leather hightops</div>
-                    <div class="line"></div>
-                    <div class="product__price"><span>65.07</span></div>
+                    </div>
+                    <img src="img/3.jpg">
+
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+                <div class="product text-center">
+                    <div class="hover-text transition">
+                <span>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </span>
+                    </div>
+                    <img src="img/4.jpg">
+
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
                 </div>
             </div>
-            <div class="product__add-to-cart"><span>Add to cart</span></div>
         </div>
-    </div>
-</div>
+        <div class="fourfold">
+            <div class="twice">
+                <div class="product text-center">
+                    <div class="hover-text transition">
+                <span>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </span>
+                    </div>
+                    <img src="img/1.jpg">
+
+                    <div class="new"><span>NEW</span></div>
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+                <div class="product text-center">
+                    <div class="hover-text transition">
+                <span>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </span>
+                    </div>
+                    <img src="img/2.jpg">
+
+                    <div class="sale"><span>SALE</span></div>
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price line-through-price"><span>65.07</span></div>
+                            <div class="sale-price"><span>16.99</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+            </div>
+
+            <div class="twice">
+                <div class="product text-center">
+                    <div class="hover-text transition">
+                <span>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </span>
+                    </div>
+                    <img src="img/3.jpg">
+
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+                <div class="product text-center">
+                    <div class="hover-text transition">
+                <span>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </span>
+                    </div>
+                    <img src="img/4.jpg">
+
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="content__section">
 
         <div class="text-center"><h2 class="content__section-name">Just arrived</h2>
-            <a href="#" class="content__section-view-all">View all</a></div>
-<div class="fourfold">
-        <div class="twice">
-        <div class="product text-center">
-            <div class="hover-text transition">
+            <a href="#" class="content__section-view-all" onclick="return false;">View all</a></div>
+        <div class="fourfold">
+            <div class="twice">
+                <div class="product text-center">
+                    <div class="hover-text transition">
                 <span>
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
-            </div>
-            <img src="img/5.jpg">
-            <div class="product__description">
-                <div class="product__info-wrapper">
-                    <div class="product__name">Leather hightops</div>
-                    <div class="line"></div>
-                    <div class="product__price"><span>65.07</span></div>
-                </div>
-            </div>
-            <div class="product__add-to-cart"><span>Add to cart</span></div>
-        </div>
-        <div class="product text-center">
-            <div class="hover-text transition">
-                <span>
-                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                </span>
-            </div>
-            <img src="img/6.jpg">
-            <div class="product__description">
-                <div class="product__info-wrapper">
-                    <div class="product__name">Leather hightops</div>
-                    <div class="line"></div>
-                    <div class="product__price"><span>65.07</span></div>
-                </div>
-            </div>
-            <div class="product__add-to-cart"><span>Add to cart</span></div>
-        </div>
-        </div>
-        <div class="twice">
-        <div class="product text-center">
-            <div class="hover-text transition">
-                <span>
-                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                </span>
-            </div>
-            <img src="img/7.jpg">
-            <div class="product__description">
-                <div class="product__info-wrapper">
-                    <div class="product__name">Leather hightops</div>
-                    <div class="line"></div>
-                    <div class="product__price"><span>65.07</span></div>
-                </div>
-            </div>
-            <div class="product__add-to-cart"><span>Add to cart</span></div>
-        </div>
+                    </div>
+                    <img src="img/1.jpg">
 
-        <div class="product text-center">
-            <div class="hover-text transition">
+                    <div class="new"><span>NEW</span></div>
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+                <div class="product text-center">
+                    <div class="hover-text transition">
                 <span>
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
-            </div>
-            <img src="img/8.jpg">
-            <div class="product__description">
-                <div class="product__info-wrapper">
-                    <div class="product__name">Leather hightops</div>
-                    <div class="line"></div>
-                    <div class="product__price"><span>65.07</span></div>
+                    </div>
+                    <img src="img/2.jpg">
+
+                    <div class="sale"><span>SALE</span></div>
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price line-through-price"><span>65.07</span></div>
+                            <div class="sale-price"><span>16.99</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
                 </div>
             </div>
-            <div class="product__add-to-cart"><span>Add to cart</span></div>
+
+            <div class="twice">
+                <div class="product text-center">
+                    <div class="hover-text transition">
+                <span>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </span>
+                    </div>
+                    <img src="img/3.jpg">
+
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+                <div class="product text-center">
+                    <div class="hover-text transition">
+                <span>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </span>
+                    </div>
+                    <img src="img/4.jpg">
+
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+        <div class="fourfold">
+            <div class="twice">
+                <div class="product text-center">
+                    <div class="hover-text transition">
+                <span>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </span>
+                    </div>
+                    <img src="img/5.jpg">
+
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+                <div class="product text-center">
+                    <div class="hover-text transition">
+                <span>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </span>
+                    </div>
+                    <img src="img/6.jpg">
+
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+            </div>
+            <div class="twice">
+                <div class="product text-center">
+                    <div class="hover-text transition">
+                <span>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </span>
+                    </div>
+                    <img src="img/7.jpg">
+
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+
+                <div class="product text-center">
+                    <div class="hover-text transition">
+                <span>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </span>
+                    </div>
+                    <img src="img/8.jpg">
+
+                    <div class="product__description">
+                        <div class="product__info-wrapper">
+                            <div class="product__name">Leather hightops</div>
+                            <div class="line"></div>
+                            <div class="product__price"><span>65.07</span></div>
+                        </div>
+                    </div>
+                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -320,25 +489,25 @@
 
             <p>Your about us information would fit here nicely.</p>
         </div>
-<div class="links-and-social-icons ">
-        <span class="links-head">Links</span>
-        <ul class="links-ul">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Customer Service</a></li>
-            <li><a href="#">Careers</a></li>
-        </ul>
-        <div class="footer__social col-xs-offset-1 col-xs-10">
-            <div class="footer__social-row">
-                <i class="fa fa-instagram"></i>
-                <i class="fa fa-twitter-square"></i>
-                <i class="fa fa-youtube-square"></i></div>
-            <div class="footer__social-row">
-                <i class="fa fa-linkedin-square"></i>
-                <i class="fa fa-google-plus-square"></i>
-                <i class="fa fa-vimeo-square"></i></div>
+        <div class="links-and-social-icons ">
+            <span class="links-head">Links</span>
+            <ul class="links-ul">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+            <div class="footer__social col-xs-offset-1 col-xs-10">
+                <div class="footer__social-row">
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter-square"></i>
+                    <i class="fa fa-youtube-square"></i></div>
+                <div class="footer__social-row">
+                    <i class="fa fa-linkedin-square"></i>
+                    <i class="fa fa-google-plus-square"></i>
+                    <i class="fa fa-vimeo-square"></i></div>
+            </div>
         </div>
-    </div>
 
     </div>
 </div>

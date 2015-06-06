@@ -9,6 +9,9 @@
     margin-left: 10px;
   }
 
+  .twice:nth-last-of-type(n+2) {
+    display: flex;
+  }
   .fourfold {
     display: flex;
     flex-flow: row nowrap;
