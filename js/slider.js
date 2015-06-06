@@ -18,7 +18,7 @@ jQuery(document).ready(function(){
 		nextLink.click(function(){
 			if(!slideWrap.is(':animated')) {
 	
-				slideWrap.animate({left: newLeftPos}, 1500, function(){
+				slideWrap.animate({left: newLeftPos}, 1000, function(){
 					slideWrap
 						.find('.slide-item:first')
 						.appendTo(slideWrap)
