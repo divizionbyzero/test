@@ -10,12 +10,10 @@
   }
 
   .twice:nth-last-of-type(n+2) {
-    display: flex;
+    @include flexy();
   }
   .fourfold {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    @include flexbox(row, nowrap, justify, center);
   }
 
   .new, .sale {
