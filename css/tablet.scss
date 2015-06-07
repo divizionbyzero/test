@@ -7,6 +7,7 @@ $li-notiaceble: #62214e;
 
 @media screen and (min-width: 600px) {
 
+  //-------------------------------------------------------------------------------------------- products start
 
   .product {
     width: 48%;
@@ -15,16 +16,21 @@ $li-notiaceble: #62214e;
   .twice {
     @include flexbox(row, nowrap, justify, space-around);
 
-    &:nth-last-of-type(n+2){
+    &:nth-last-of-type(n+2) {
       display: none;
     }
   }
-.fourfold{
-display: block;
-&:nth-last-of-type(n+2) {
-  display: none;
-}
-}
+  .fourfold {
+    display: block;
+    &:nth-last-of-type(n+2) {
+      display: none;
+    }
+  }
+
+  //-------------------------------------------------------------------------------------------- products end
+
+  //-------------------------------------------------------------------------------------------- footer start
+
   .footer__zip {
     width: 80%;
     i {
@@ -69,6 +75,8 @@ display: block;
     width: 50%;
   }
 
+  //-------------------------------------------------------------------------------------------- footer start
+
   .nav-tabs {
     float: left !important;
     margin-left: 3%;
@@ -106,12 +114,11 @@ display: block;
 
   .tablet-submenu-open {
     height: 100%;
-    @include flexbox(row,nowrap,justify, flex-start);
+    @include flexbox(row, nowrap, justify, flex-start);
     border: 2px solid $navigation-border;
     .panel-default > .panel-heading {
       border: none;
     }
-
 
   }
   .panel-tablet {
@@ -175,7 +182,7 @@ display: block;
   }
   .panel-body ul > li > a {
     display: inline-block;
-    padding: 0  15px;
+    padding: 0 15px;
     &:hover {
       background-color: $navigation-border;
     }
@@ -193,25 +200,24 @@ display: block;
 }
 
 @media screen and (min-width: 768px) {
-  .btn-toolbar.pull-right{
+  .btn-toolbar.pull-right {
     display: none;
   }
-.navbar-style {
-font-size: 17px;
-  li:hover {
-    background-color: $find-store;
+  .navbar-style {
+    font-size: 17px;
+    li:hover {
+      background-color: $find-store;
+    }
   }
-}
   .navbar-default .navbar-nav > li > a:hover {
     color: $white;
   }
 
-  .svg-inner {
-     position: absolute;
+  .figure-inner {
+    position: absolute;
     display: inline-block;
     top: 0;
     right: 0;
-
 
     i {
       position: absolute;
