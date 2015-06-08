@@ -537,7 +537,7 @@ a[aria-expanded="true"] {
   display: block;
   margin: 0 auto;
   font-size: 18px;
-  &:hover {
+  &:hover, &:visited {
     color: darken($upper-text-color, 10%);
   }
 }
@@ -654,7 +654,7 @@ a[aria-expanded="true"] {
 
 .footer__top {
   height: 525px;
-  background-image: url("../img/bg.png");
+  background: url("../img/bg.png") repeat-x;
   border-bottom: 1px solid $upper-border-color;
 }
 

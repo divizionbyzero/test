@@ -357,7 +357,7 @@ a[aria-expanded="true"] {
   display: block;
   margin: 0 auto;
   font-size: 18px; }
-  .content__section-view-all:hover {
+  .content__section-view-all:hover, .content__section-view-all:visited {
     color: gray; }
 
 .product {
@@ -449,7 +449,7 @@ a[aria-expanded="true"] {
 
 .footer__top {
   height: 525px;
-  background-image: url("../img/bg.png");
+  background: url("../img/bg.png") repeat-x;
   border-bottom: 1px solid #d7d7d7; }
 
 .footer__top-name {
@@ -992,7 +992,7 @@ a[aria-expanded="true"] {
   display: block;
   margin: 0 auto;
   font-size: 18px; }
-  .content__section-view-all:hover {
+  .content__section-view-all:hover, .content__section-view-all:visited {
     color: gray; }
 
 .product {
@@ -1084,7 +1084,7 @@ a[aria-expanded="true"] {
 
 .footer__top {
   height: 525px;
-  background-image: url("../img/bg.png");
+  background: url("../img/bg.png") repeat-x;
   border-bottom: 1px solid #d7d7d7; }
 
 .footer__top-name {
