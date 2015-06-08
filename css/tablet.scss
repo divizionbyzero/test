@@ -152,6 +152,9 @@ $li-notiaceble: #62214e;
     color: $submenu-header-color;
     font-family: Aleo-regular;
     text-transform: none;
+    &>img {
+      display: block;
+    }
   }
   .panel-body > ul > li.noticeable, .panel-body > ul > li.noticeable > a {
     background-color: $li-notiaceble;

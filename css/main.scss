@@ -444,6 +444,9 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
     background-color: $black;
     color: $white;
   }
+  &>img {
+    display: none;
+  }
 }
 
 .tablet-submenu-open > .panel-default > .panel-heading {

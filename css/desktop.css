@@ -285,6 +285,8 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
   .panel-body ul > li > a:hover {
     background-color: black;
     color: white; }
+  .panel-body ul > li > a > img {
+    display: none; }
 
 .tablet-submenu-open > .panel-default > .panel-heading {
   border-radius: 0;
@@ -920,6 +922,8 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
   .panel-body ul > li > a:hover {
     background-color: black;
     color: white; }
+  .panel-body ul > li > a > img {
+    display: none; }
 
 .tablet-submenu-open > .panel-default > .panel-heading {
   border-radius: 0;
@@ -1412,6 +1416,8 @@ label:after {
     color: #343434;
     font-family: Aleo-regular;
     text-transform: none; }
+    .panel-body ul li a > img {
+      display: block; }
 
   .panel-body > ul > li.noticeable, .panel-body > ul > li.noticeable > a {
     background-color: #62214e;
