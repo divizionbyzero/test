@@ -37,7 +37,7 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
   }
 }
 
-@mixin input-appearance () {
+@mixin input-appearance() {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -111,7 +111,7 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
   font-style: normal;
 }
 
-.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, #hexagon > span, .hover-text > span {
+.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, #hexagon > span, .hover-text > span, .slide-p > span {
   font-family: Aleo-regular;
 }
 
@@ -185,7 +185,7 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
 }
 
 .nav > li > a {
-  padding: 5px 10px;
+  padding: 7px 10px;
 }
 
 .nav > li > a:hover {
@@ -198,8 +198,13 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
 //----------------------------------------------------------- logo start
 
 .header__logo {
+  height: 124px;
   margin-bottom: 30px;
   text-align: center;
+  a {
+    display: block;
+    height: 124px;
+  }
 }
 
 .header__logo-top, .header__logo-bottom {
@@ -209,9 +214,11 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
 }
 
 .header__logo-top {
-  left: 50%;
-  margin-left: -95px;
+  height: 34px;
+  // left: 50%;
+  //margin-left: -95px;
 }
+
 .header__logo-bottom {
   margin-top: 10px;
 }
@@ -264,6 +271,10 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
   font-weight: normal;
 }
 
+.right-inner-addon {
+  display: none;
+}
+
 //----------------------------------------------------------- navbar end
 
 //----------------------------------------------------------- slider start
@@ -274,7 +285,6 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
   clear: both;
   zoom: 1;
 }
-
 
 .slider {
   position: relative;
@@ -317,14 +327,19 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
 
 .slide-item-1, .slide-item-2 {
   height: 290px;
+  background-size: 427px 290px;
 }
 
 .slide-item-1 {
-  background: url("../img/img-1.jpg") no-repeat $black;
+  background: url("../img/img-1.jpg") no-repeat;
 }
 
 .slide-item-2 {
   background: url("../img/img-2.jpg") no-repeat $black;
+}
+
+.slide-p {
+  display: none;
 }
 
 .slide-title, .slider-button {
@@ -334,7 +349,7 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
 }
 
 .slide-title {
-  top: 50px;
+  top: 20px;
   display: inline-block;
   margin-left: -150px;
   width: 300px;
@@ -344,7 +359,7 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
 }
 
 .slider-button {
-  top: 160px;
+  top: 210px;
   width: 150px;
   height: 50px;
   border: 3px solid $white;
@@ -367,7 +382,7 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
   width: 30px;
   cursor: pointer;
   &.disable {
-    background: #dbdbdb;
+    background: $white;
   }
 }
 
@@ -411,7 +426,6 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
   top: 180px;
   width: 100%;
 }
-
 
 .panel-body {
   padding: 0;
@@ -503,6 +517,10 @@ a[aria-expanded="true"] {
 //------------------------------------------------------------------------------------- header end
 
 //-------------------------------------------------------------------------------------------- products start
+.fourfold {
+  position: relative;
+}
+
 .content__section-name, .footer__top-name {
   display: inline-block;
   text-transform: uppercase;
@@ -519,6 +537,9 @@ a[aria-expanded="true"] {
   display: block;
   margin: 0 auto;
   font-size: 18px;
+  &:hover {
+    color: darken($upper-text-color, 10%);
+  }
 }
 
 .product {
@@ -626,7 +647,10 @@ a[aria-expanded="true"] {
 .hover-text {
   display: none;
 }
+
 //-------------------------------------------------------------------------------------------- products end
+
+//-------------------------------------------------------------------------------------------- footer start
 
 .footer__top {
   height: 525px;
@@ -688,7 +712,12 @@ a[aria-expanded="true"] {
   outline: none;
   color: $section-name-color;
   width: auto;
+  padding-right: 5px;
   cursor: pointer;
+  option {
+    transition: 1s;
+  }
+
 }
 
 label {
@@ -721,6 +750,11 @@ label:after {
     color: $white;
     font-size: 22px;
     line-height: 50px;
+  }
+  &:hover {
+    background-color: darken($find-store, 10%);
+    transition: 1s;
+    cursor: pointer;
   }
 }
 
@@ -788,7 +822,8 @@ label:after {
 
   .product {
     width: 220px;
-    height: 360px; }
+    height: 360px;
+  }
 
   .fourfold {
     display: block;

@@ -97,7 +97,7 @@ $li-notiaceble: #62214e;
     background-color: transparentize($black, .5);
     height: 140px;
     width: 100%;
-    padding: 10px 25px;
+    padding: 10px;
     opacity: 0;
     span {
       display: block;
@@ -114,6 +114,7 @@ $li-notiaceble: #62214e;
 
   .tablet-submenu-open {
     height: 100%;
+    //width: 80%;
     @include flexbox(row, nowrap, justify, flex-start);
     border: 2px solid $navigation-border;
     .panel-default > .panel-heading {
@@ -197,6 +198,37 @@ $li-notiaceble: #62214e;
   .panel {
     background-color: $almost-white;
   }
+
+  .slide-p {
+    position: absolute;
+    left: 50vw;
+    top: 105px;
+    display: inline-block;
+    width: 40vw;
+    line-height: 1.15em;
+    color: $navigation-background-1;
+    font-size: 20px;
+  }
+  .slide-title {
+    width: 40vw;
+  }
+
+  .header__navigation {
+    width: 80%;
+    border: none;
+  }
+
+  .collapsing {
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: .0s;
+    -o-transition-duration: .0s;
+    transition-duration: .0s;
+    -webkit-transition-property: height, visibility;
+    -o-transition-property: height, visibility;
+    transition-property: height, visibility;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -254,5 +286,12 @@ $li-notiaceble: #62214e;
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
     border-top: 25px solid $svg-color;
+  }
+  .header__navigation {
+    top: 185px;
+  }
+
+  .slide-title {
+    width: 30vw;
   }
 }

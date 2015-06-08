@@ -9,7 +9,8 @@ html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acro
 * {
   box-sizing: border-box; }
   * html .clearfix {
-    height: 1%; }
+    height: 1%;
+    outline: none; }
 
 body {
   line-height: 1; }

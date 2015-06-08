@@ -2,12 +2,12 @@
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
 <html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
-    <meta charset="UTF-8">
+    <meta charset=UTF-8>
     <title></title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/desktop.css"/>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -32,8 +32,8 @@
     </div>
     <div class="header__logo">
         <a href="index.html">
-            <img class="header__logo-top clearfix" src="img/logo-black.png">
-            <img class="header__logo-bottom" src="img/logo-gray.png">
+            <img class="header__logo-top" src=""> <!-- moz fix-->
+            <img class="header__logo-bottom" src="img/logo.png" alt="header">
         </a>
     </div>
 
@@ -59,6 +59,12 @@
             <div class="btn-group"><i class="glyphicon glyphicon-user"></i></div>
             <div class="btn-group"><i class="glyphicon glyphicon-shopping-cart"></i><span class="badge">5</span></div>
         </div>
+        <div class="right-inner-addon pull-right col-sm-3">
+            <i class="glyphicon glyphicon-search"></i>
+            <input type="search"
+                   class="form-control"
+                   placeholder="Search"/>
+        </div>
     </div>
     <div id="accordion" class="panel-group collapse header__navigation tablet-submenu">
         <div class="tablet-submenu-open">
@@ -71,9 +77,9 @@
                 <div id="collapse-1" class="panel-collapse collapse tablet-collapse-in">
                     <div class="panel-body">
                         <ul>
-                            <li><a href="#">blabla1</a></li>
-                            <li><a href="#">blabla2</a></li>
-                            <li><a href="#">blabla3</a></li>
+                            <li><a href="#">Item-1</a></li>
+                            <li><a href="#">Item-2</a></li>
+                            <li><a href="#">Item-3</a></li>
                         </ul>
                     </div>
                 </div>
@@ -87,9 +93,9 @@
                 <div id="collapse-2" class="panel-collapse collapse tablet-collapse-in">
                     <div class="panel-body">
                         <ul>
-                            <li><a href="#">blabla1</a></li>
-                            <li class="noticeable"><a href="#">blabla2</a></li>
-                            <li><a href="#">blabla3</a></li>
+                            <li><a href="#">Item-1</a></li>
+                            <li class="noticeable"><a href="#">Item-2</a></li>
+                            <li><a href="#">Item-3</a></li>
                         </ul>
                     </div>
                 </div>
@@ -103,9 +109,9 @@
                 <div id="collapse-3" class="panel-collapse collapse tablet-collapse-in">
                     <div class="panel-body">
                         <ul>
-                            <li><a href="#"><img src="img/small1.jpg"></a></li>
-                            <li><a href="#"><img src="img/small2.jpg"</a></li>
-                            <li><a href="#">blabla3</a></li>
+                            <li><a href="#"><img src="img/small1.jpg" alt="small-item"></a></li>
+                            <li><a href="#"><img src="img/small2.jpg" alt="small-item"></a></li>
+                            <li><a href="#">Item-3</a></li>
                         </ul>
                     </div>
                 </div>
@@ -120,17 +126,19 @@
             <div class="slider-button"><a href="#">View collection</a></div>
             <div class="slide-wrap">
                 <div class="slide-item">
-                    <!--<img src="img/img-1.jpg" alt=""/>-->
                     <span class="slide-title">Gentlemen, this way please</span>
+                    <span class="slide-p">Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                        Etiam rhoncus. </span>
 
                     <div class="slide-item-1"></div>
                 </div>
                 <div class="slide-item">
-                    <span class="slide-title">StoReSmart solution</span>
+                    <span class="slide-title">StoReSmart solution present</span>
+                    <span class="slide-p">Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
+ </span>
 
                     <div class="slide-item-2">
                     </div>
-                    <!--<img src="img/img-2.jpg" alt=""/>-->
                 </div>
             </div>
             <div class="clear"></div>
@@ -154,12 +162,11 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/1.jpg">
-
+                    <img src="img/1.jpg" alt="product photo">
                     <div class="new"><span>NEW</span></div>
                     <div class="product__description">
                         <div class="product__info-wrapper">
-                            <div class="product__name">Leather hightops</div>
+                            <div class="product__name">Dark brogues</div>
                             <div class="line"></div>
                             <div class="product__price"><span>65.07</span></div>
                         </div>
@@ -172,7 +179,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/2.jpg">
+                    <img src="img/2.jpg"  alt="product photo">
 
                     <div class="sale"><span>SALE</span></div>
                     <div class="product__description">
@@ -194,11 +201,10 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/3.jpg">
-
+                    <img src="img/3.jpg" alt="product photo">
                     <div class="product__description">
                         <div class="product__info-wrapper">
-                            <div class="product__name">Leather hightops</div>
+                            <div class="product__name">Grey Brogues</div>
                             <div class="line"></div>
                             <div class="product__price"><span>65.07</span></div>
                         </div>
@@ -211,11 +217,10 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/4.jpg">
-
+                    <img src="img/4.jpg"  alt="product photo">
                     <div class="product__description">
                         <div class="product__info-wrapper">
-                            <div class="product__name">Leather hightops</div>
+                            <div class="product__name">Dark Brogues</div>
                             <div class="line"></div>
                             <div class="product__price"><span>65.07</span></div>
                         </div>
@@ -232,12 +237,11 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/1.jpg">
-
+                    <img src="img/1.jpg"  alt="product photo">
                     <div class="new"><span>NEW</span></div>
                     <div class="product__description">
                         <div class="product__info-wrapper">
-                            <div class="product__name">Leather hightops</div>
+                            <div class="product__name">Dark brogues</div>
                             <div class="line"></div>
                             <div class="product__price"><span>65.07</span></div>
                         </div>
@@ -250,8 +254,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/2.jpg">
-
+                    <img src="img/2.jpg" alt="product photo">
                     <div class="sale"><span>SALE</span></div>
                     <div class="product__description">
                         <div class="product__info-wrapper">
@@ -272,11 +275,10 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/3.jpg">
-
+                    <img src="img/3.jpg" alt="product photo">
                     <div class="product__description">
                         <div class="product__info-wrapper">
-                            <div class="product__name">Leather hightops</div>
+                            <div class="product__name">Grey Brogues</div>
                             <div class="line"></div>
                             <div class="product__price"><span>65.07</span></div>
                         </div>
@@ -289,11 +291,10 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/4.jpg">
-
+                    <img src="img/4.jpg" alt="product photo">
                     <div class="product__description">
                         <div class="product__info-wrapper">
-                            <div class="product__name">Leather hightops</div>
+                            <div class="product__name">Dark Brogues</div>
                             <div class="line"></div>
                             <div class="product__price"><span>65.07</span></div>
                         </div>
@@ -301,6 +302,8 @@
                     <div class="product__add-to-cart"><span>Add to cart</span></div>
                 </div>
             </div>
+            <!--<div class="navy prev-slides"></div>-->
+            <!--<div class="navy next-slides"></div>-->
         </div>
     </div>
     <div class="content__section">
@@ -315,8 +318,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/1.jpg">
-
+                    <img src="img/1.jpg" alt="product photo">
                     <div class="new"><span>NEW</span></div>
                     <div class="product__description">
                         <div class="product__info-wrapper">
@@ -333,8 +335,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/2.jpg">
-
+                    <img src="img/2.jpg" alt="product photo">
                     <div class="sale"><span>SALE</span></div>
                     <div class="product__description">
                         <div class="product__info-wrapper">
@@ -355,8 +356,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/3.jpg">
-
+                    <img src="img/3.jpg" alt="product photo">
                     <div class="product__description">
                         <div class="product__info-wrapper">
                             <div class="product__name">Leather hightops</div>
@@ -372,8 +372,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/4.jpg">
-
+                    <img src="img/4.jpg" alt="product photo">
                     <div class="product__description">
                         <div class="product__info-wrapper">
                             <div class="product__name">Leather hightops</div>
@@ -393,8 +392,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/5.jpg">
-
+                    <img src="img/5.jpg" alt="product photo">
                     <div class="product__description">
                         <div class="product__info-wrapper">
                             <div class="product__name">Leather hightops</div>
@@ -410,8 +408,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/6.jpg">
-
+                    <img src="img/6.jpg" alt="product photo">
                     <div class="product__description">
                         <div class="product__info-wrapper">
                             <div class="product__name">Leather hightops</div>
@@ -429,8 +426,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/7.jpg">
-
+                    <img src="img/7.jpg" alt="product photo">
                     <div class="product__description">
                         <div class="product__info-wrapper">
                             <div class="product__name">Leather hightops</div>
@@ -447,8 +443,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/8.jpg">
-
+                    <img src="img/8.jpg" alt="product photo">
                     <div class="product__description">
                         <div class="product__info-wrapper">
                             <div class="product__name">Leather hightops</div>
@@ -459,6 +454,8 @@
                     <div class="product__add-to-cart"><span>Add to cart</span></div>
                 </div>
             </div>
+            <!--<div class="navy prev-slides"></div>-->
+            <!--<div class="navy next-slides"></div>-->
         </div>
     </div>
 
