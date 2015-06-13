@@ -3,7 +3,7 @@
 $svg-color: #f52c66;
 $submenu-header-color: #343434;
 $almost-white: #f6f6f6;
-$li-notiaceble: #62214e;
+$li-noticeable: #62214e;
 
 @media screen and (min-width: 600px) {
 
@@ -94,15 +94,16 @@ $li-notiaceble: #62214e;
     position: absolute;
     display: block;
     bottom: 140px;
-    background-color: transparentize($black, .5);
-    height: 140px;
+    height: 65%;
     width: 100%;
-    padding: 10px;
     opacity: 0;
     span {
-      display: block;
       position: absolute;
-      width: 90%;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: transparentize($black, .5);
       color: $white;
       text-align: left;
     }
@@ -152,14 +153,9 @@ $li-notiaceble: #62214e;
     color: $submenu-header-color;
     font-family: Aleo-regular;
     text-transform: none;
-    &>img {
+    & > img {
       display: block;
     }
-  }
-  .panel-body > ul > li.noticeable, .panel-body > ul > li.noticeable > a {
-    background-color: $li-notiaceble;
-    color: $white;
-    line-height: 37px;
   }
 
   .content__section-name {
@@ -174,34 +170,8 @@ $li-notiaceble: #62214e;
     width: 300px;
     margin-left: 0;
   }
-  .tablet-submenu-open > .panel-default > .panel-heading {
-    background-color: $upper-background-color;
-    color: $navigation-background-1;
-    a {
-      padding-left: 20px;
-    }
-  }
-  .panel-body > ul > li.noticeable > a {
-    margin-left: 0;
-  }
-  .panel-body ul > li > a {
-    display: inline-block;
-    padding: 0 15px;
-    &:hover {
-      background-color: $navigation-border;
-    }
-    img {
-      padding: 15px;
-    }
-  }
-  .panel-body ul {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .panel {
-    background-color: $almost-white;
-  }
 
+  /////////////////////////////////////////////////////////////
   .slide-p {
     position: absolute;
     left: 50vw;
@@ -221,20 +191,96 @@ $li-notiaceble: #62214e;
     border: none;
   }
 
-  .collapsing {
-    -webkit-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-    transition-timing-function: ease;
-    -webkit-transition-duration: .0s;
-    -o-transition-duration: .0s;
-    transition-duration: .0s;
-    -webkit-transition-property: height, visibility;
-    -o-transition-property: height, visibility;
-    transition-property: height, visibility;
-  }
 }
 
+
 @media screen and (min-width: 768px) {
+  //--------------------------------------------tablet submenu start
+  .submenu-open-tablet {
+    display: flex;
+    flex-flow: row nowrap;
+    position: absolute;
+    top: 34px;
+    min-width: 500px;
+    //height: 300px;
+    border: 2px solid $navigation-border;
+    z-index: 500;
+    background-color: $almost-white;
+    & > div:not(:last-of-type) {
+      border-right: 1px solid $upper-border-color;
+    }
+  }
+
+  .heading-tablet {
+    display: block;
+    padding: 15px 35px 10px 15px;
+    width: 100%;
+    background-color: $upper-background-color;
+    border-bottom: 1px solid $upper-border-color;
+    h4 {
+      margin: 0;
+      a {
+        color: $navigation-border;
+        text-transform: uppercase;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .columns {
+    -moz-column-count: 2;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 10px;
+  }
+
+  .body-panel-tablet > ul > li {
+    padding-top: 5px;
+    @include top-bottom(margin, 5px);
+    a {
+      padding: 5px 10px;
+      @include right-left(margin, 10px);
+      color: $navigation-border;
+      font-size: 15px;
+      &:hover {
+        cursor: pointer;
+        background-color: $navigation-border;
+        color: $white;
+        text-decoration: none;
+      }
+      img {
+        margin-top: 10px;
+      }
+    }
+
+    &.no-hover:hover {
+      a {
+        cursor: auto;
+        background-color: transparent;
+      }
+    }
+  }
+
+  li.noticeable a {
+    background-color: $li-noticeable;
+    color: $white !important;
+    @include right-left(padding, 15px !important);
+    &:hover {
+      background-color: $svg-color !important;
+    }
+  }
+  li.bold-item a {
+    font-weight: 900 !important;
+  }
+  //--------------------------------------------tablet submenu end
+  .header__navigation {
+    display: none;
+  }
+
+
+
   .btn-toolbar.pull-right {
     display: none;
   }

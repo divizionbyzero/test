@@ -111,12 +111,12 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
   font-style: normal;
 }
 
-.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, #hexagon > span, .hover-text > span, .slide-p > span {
+.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, #hexagon > span, .hover-text > span, .slide-p > span, .body-panel-tablet > ul > li > a {
   font-family: Aleo-regular;
 }
 
 .oswald-light-font, .product__add-to-cart span, .content__section-name, .footer__top-name,
-h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
+h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-tablet > h4 > a {
   font-family: "Oswald Light", sans-serif;
 }
 
@@ -162,19 +162,18 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
     position: relative;
     float: none;
     display: inline-block;
-    bottom: -1px;
+    //bottom: -1px;
+    //height: 36px;
     *display: inline; /* ie7 fix */
+
     zoom: 1; /* hasLayout ie7 trigger */
     &:first-of-type, &:last-of-type {
       @include right-left(border, 1px solid $upper-border-color);
     }
     &:hover {
       position: relative;
-      border-right: 2px solid $upper-border-color;
-      border-left: 2px solid $upper-border-color;
       background-color: $white;
-      margin-left: -1px;
-      margin-right: -1px;
+
     }
     a {
       border: none;
@@ -184,13 +183,15 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
   }
 }
 
-.nav > li > a {
-  padding: 7px 10px;
+.active {
 }
 
-.nav > li > a:hover {
-  background-color: $white;
-  border: none;
+.nav > li > a {
+  padding: 7px 10px;
+  &:hover {
+    background-color: $white;
+    border: none;
+  }
 }
 
 //----------------------------------------------------------- tabs end
@@ -215,8 +216,6 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
 
 .header__logo-top {
   height: 34px;
-  // left: 50%;
-  //margin-left: -95px;
 }
 
 .header__logo-bottom {
@@ -417,21 +416,25 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
 
 //----------------------------------------------------------- navigation start
 
+.heading-tablet {
+  display: none;
+}
+
 .header__navigation {
   position: absolute !important;
   z-index: 20;
   overflow: visible;
   background-color: #fff;
-  border: 1px solid #ddd;
-  top: 180px;
+  //  border: 1px solid #ddd;
+  top: 183px;
   width: 100%;
 }
 
-.panel-body {
+.body-panel {
   padding: 0;
 }
 
-.panel-body ul > li > a {
+.body-panel ul > li > a {
   display: block;
   line-height: 37px;
   padding-left: 20px;
@@ -444,27 +447,52 @@ h4.panel-title > a, .panel-body > ul > li > a, .navbar-style > li > a {
     background-color: $black;
     color: $white;
   }
-  &>img {
+  & > img {
     display: none;
   }
 }
 
-.tablet-submenu-open > .panel-default > .panel-heading {
+.heading {
+  position: relative;
   border-radius: 0;
   border: 2px solid $navigation-border;
   background-color: $navigation-background-1;
-  color: $white;
-  font-size: 16px;
+  .title-panel a {
+    padding-left: 10px;
+    color: $white;
+    font-size: 16px;
+    text-transform: uppercase;
+    &:after {
+      content: "\FE40";
+      position: absolute;
+      right: 10px;
+      top: 15px;
+      color: $navigation-border;
+      height: 5px;
+    }
+  }
 }
 
-.panel-body ul {
-  margin-top: -3px;
-  margin-bottom: -10px;
+.body-panel ul {
+  margin: 0;
 }
 
-h4.panel-title > a, .panel-body ul li a {
+.submenu-open, .body-panel {
+  display: none;
+}
+
+.body-panel {
+  li:not(:last-of-type) {
+    border-bottom: 1px solid $navbar-toggle-color;
+  }
+}
+
+h4.title-panel > a, .body-panel ul li a {
   text-decoration: none;
   text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 h4.panel-title > a {
@@ -475,14 +503,19 @@ h4.panel-title > a {
   padding-left: 5px;
 }
 
-.panel-heading {
+.heading {
   padding: 0 !important;
 }
 
-a[aria-expanded="true"] {
-  //line-height: 37px!important;
+.select-heading {
   background-color: $upper-background-color !important;
-  color: $navigation-border !important;
+  a {
+    color: $navigation-border !important;
+    &:after {
+      transform: rotate(180deg);
+    }
+  }
+
 }
 
 .nav-tabs > li > a {
@@ -490,16 +523,8 @@ a[aria-expanded="true"] {
   border-radius: 0;
 }
 
-.panel-group .panel + .panel {
-  margin-top: 0;
-}
-
 .panel-default {
   border: none;
-}
-
-.panel-group.header__navigation.collapse.in {
-  border-bottom: none;
 }
 
 .panel-body > ul > li.noticeable, .panel-body > ul > li.noticeable > a {
@@ -513,6 +538,10 @@ a[aria-expanded="true"] {
   font-family: nexa_boldregular, serif;
   margin-left: 20px;
   text-transform: none;
+}
+
+.submenu-open-tablet {
+  display: none;
 }
 
 //-------------------------------------------------------------- navigation end
@@ -530,8 +559,6 @@ a[aria-expanded="true"] {
   padding-bottom: 20px;
   border-bottom: double 4px $upper-border-color;
   margin-top: 50px;
-  font-weight: 100;
-  font-size: 35px;
   color: $section-name-color;
 }
 
@@ -569,7 +596,6 @@ a[aria-expanded="true"] {
 
 .product__add-to-cart:hover {
   background-color: $navigation-border;
-  transition: 1s;
   cursor: pointer;
 }
 
@@ -666,10 +692,16 @@ a[aria-expanded="true"] {
   background-color: transparentize($social-color, .5);
   @include top-bottom(padding, 30px);
   border-bottom: none;
-  color: $white;
   margin-top: 30px;
+}
+
+.text-center-on-blue {
+  display: inline-block;
+  font-weight: 100;
   font-size: 40px;
   line-height: 1.3em;
+  color: $white;
+  width: auto;
 }
 
 .footer__zip {
@@ -756,7 +788,6 @@ label:after {
   }
   &:hover {
     background-color: darken($find-store, 10%);
-    transition: 1s;
     cursor: pointer;
   }
 }

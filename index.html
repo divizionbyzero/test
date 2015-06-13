@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width">
     <title></title>
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -14,17 +14,19 @@
 
 <div class="header clearfix">
     <div class="header__upper-navigation col-xs-12">
-        <ul class="nav nav-tabs">
-            <li class="active" id="tab-1"><a href="index.html">Unishop</a>
-            <li id="tab-2"><a href="#">Twister</a>
-            <li id="tab-3"><a href="#">RockStar's</a>
-        </ul>
-    </div>
-    <div class="figure-inner">
-        <i class="glyphicon glyphicon-star"></i>
+        <div class="header__wrap clearfix">
+            <ul class="nav nav-tabs">
+                <li class="active" id="tab-1"><a href="index.html">Unishop</a>
+                <li id="tab-2"><a href="#">Twister</a>
+                <li id="tab-3"><a href="#">RockStar's</a>
+            </ul>
+            <div class="figure-inner">
+                <i class="glyphicon glyphicon-star"></i>
 
-        <div id="hexagon">
-            <span>Super new stuff is here!</span>
+                <div id="hexagon">
+                    <span>Super new stuff is here!</span>
+                </div>
+            </div>
         </div>
     </div>
     <div class="header__logo">
@@ -42,82 +44,380 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <ul class="nav navbar-nav navbar-left collapse navbar-collapse navbar-style" data-toggle="collapse"
-            data-target="#accordion">
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Children</a></li>
-            <li><a href="#">Sale</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Locator</a></li>
-        </ul>
+        <div class="navigation-wrap clearfix">
+            <ul class="nav navbar-nav navbar-left collapse navbar-collapse navbar-style" data-toggle="collapse"
+                data-target="#accordion">
+                <li id="women"><a href="#">Women</a></li>
+                <li id="men"><a href="#">Men</a></li>
+                <li id="children"><a href="#">Children</a></li>
+                <li id="sale"><a href="#">Sale</a></li>
+                <li id="contact"><a href="#">Contact</a></li>
+                <li id="locator"><a href="#">Locator</a></li>
+            </ul>
 
-        <div class="btn-toolbar pull-right" role="toolbar">
-            <div class="btn-group"><i class="glyphicon glyphicon-user"></i></div>
-            <div class="btn-group"><i class="glyphicon glyphicon-shopping-cart"></i><span class="badge">5</span></div>
-        </div>
-        <div class="right-inner-addon pull-right col-sm-3">
-            <i class="glyphicon glyphicon-search"></i>
-            <input type="search"
-                   class="form-control"
-                   placeholder="Search"/>
+            <div class="btn-toolbar pull-right" role="toolbar">
+                <div class="btn-group"><i class="glyphicon glyphicon-user"></i></div>
+                <div class="btn-group"><i class="glyphicon glyphicon-shopping-cart"></i><span class="badge">5</span>
+                </div>
+            </div>
+            <div class="right-inner-addon pull-right col-sm-3">
+                <i class="glyphicon glyphicon-search"></i>
+                <input type="search"
+                       class="form-control"
+                       placeholder="Search"/>
+            </div>
+
+            <div class="tablet-menu clearfix">
+                <div class="submenu-open-tablet" data-id="women">
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by products</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet columns">
+                            <ul>
+                                <li><a href="#">New in: Clothing</a></li>
+                                <li><a href="#">New in: Accessories</a></li>
+                                <li><a href="#">New in: Shoes</a></li>
+                                <li class="noticeable"><a href="#">SALE - Up to 50%</a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Caps & Hats</a></li>
+                                <li><a href="#">Jumpers & Cardigans</a></li>
+                                <li><a href="#">Leather Jackets</a></li>
+                                <li><a href="#">Shirts</a></li>
+                                <li><a href="#">Shoes, Boots & Trainers</a></li>
+                                <li><a href="#">Shorts</a></li>
+                                <li><a href="#">Swimwear</a></li>
+                                <li><a href="#">Trousers & Chinos</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Watches</a></li>
+                                <li><a href="#">Officewear</a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li class="no-hover"><a></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="">American Apparel</a></li>
+                                <li><a href="#">Bellfield</a></li>
+                                <li><a href="">Cheap Monday</a></li>
+                                <li><a href="#">Espirit</a></li>
+                                <li><a href="">Farah Vintage</a></li>
+                                <li><a href="#">G - Star</a></li>
+                                <li><a href="">New Balance</a></li>
+                                <li><a href="#">Nike</a></li>
+                                <li><a href="">Ray - Ban</a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li class="bold-item"><a href="#">A to Z Brands</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>most popular</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#"><img src="img/small1.jpg"/></a></li>
+                                <li><a href="#"><img src="img/small2.jpg"/></a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li><a href="#">View More Popular</a></li>
+                                <li><a href="#">Today's New Listings</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="submenu-open-tablet" data-id="men">
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands men</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#">Item-1</a></li>
+                                <li><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="">Item-1</a></li>
+                                <li class="noticeable"><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#">Item-1</a></li>
+                                <li><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="submenu-open-tablet" data-id="children">
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands children</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#">Item-1</a></li>
+                                <li><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="">Item-1</a></li>
+                                <li class="noticeable"><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#">Item-1</a></li>
+                                <li><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="submenu-open-tablet" data-id="sale">
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands sale</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#">Item-1</a></li>
+                                <li><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="">Item-1</a></li>
+                                <li class="noticeable"><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#">Item-1</a></li>
+                                <li><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="submenu-open-tablet" data-id="contact">
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands contact</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#">Item-1</a></li>
+                                <li><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="">Item-1</a></li>
+                                <li class="noticeable"><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#">Item-1</a></li>
+                                <li><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="submenu-open-tablet" data-id="locator">
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by brands locator</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#">Item-1</a></li>
+                                <li><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop bdfsdfsd</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="">Item-1</a></li>
+                                <li class="noticeable"><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>shop by bsdfsdfrands</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#">Item-1</a></li>
+                                <li><a href="#">Item-2</a></li>
+                                <li><a href="#">Item-3</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </div>
-    <div id="accordion" class="panel-group collapse header__navigation tablet-submenu">
-        <div class="tablet-submenu-open">
-            <div class="panel panel-default panel-tablet">
-                <div class="panel-heading accordion-toggle">
-                    <h4 class="panel-title">
-                        <a href="#collapse-1" data-parent="#accordion" data-toggle="collapse">search</a>
+    <div id="my-accordion" class="header__navigation">
+        <div class="submenu-open">
+            <div>
+                <div class="heading">
+                    <h4 class="title-panel">
+                        <a>shop by brands</a>
                     </h4>
                 </div>
-                <div id="collapse-1" class="panel-collapse collapse tablet-collapse-in">
-                    <div class="panel-body">
-                        <ul>
-                            <li><a href="#">Item-1</a></li>
-                            <li><a href="#">Item-2</a></li>
-                            <li><a href="#">Item-3</a></li>
-                        </ul>
-                    </div>
+                <div id="one-panel" class="body-panel">
+                    <ul>
+                        <li><a href="#">Item-1</a></li>
+                        <li><a href="#">Item-2</a></li>
+                        <li><a href="#">Item-3</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="panel panel-default panel-tablet">
-                <div class="panel-heading accordion-toggle">
-                    <h4 class="panel-title">
-                        <a href="#collapse-2" data-parent="#accordion" data-toggle="collapse">shop by brands</a>
+            <div>
+                <div class="heading">
+                    <h4 class="title-panel">
+                        <a>shop by brands</a>
                     </h4>
                 </div>
-                <div id="collapse-2" class="panel-collapse collapse tablet-collapse-in">
-                    <div class="panel-body">
-                        <ul>
-                            <li><a href="#">Item-1</a></li>
-                            <li class="noticeable"><a href="#">Item-2</a></li>
-                            <li><a href="#">Item-3</a></li>
-                        </ul>
-                    </div>
+                <div id="two-panel" class="body-panel">
+                    <ul>
+                        <li><a href="">Item-1</a></li>
+                        <li class="noticeable"><a href="#">Item-2</a></li>
+                        <li><a href="#">Item-3</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="panel panel-default panel-tablet">
-                <div class="panel-heading accordion-toggle">
-                    <h4 class="panel-title">
-                        <a href="#collapse-3" data-parent="#accordion" data-toggle="collapse">promotions</a>
+            <div>
+                <div class="heading">
+                    <h4 class="title-panel">
+                        <a>shop by brands</a>
                     </h4>
                 </div>
-                <div id="collapse-3" class="panel-collapse collapse tablet-collapse-in">
-                    <div class="panel-body">
-                        <ul>
-                            <li><a href="#"><img src="img/small1.jpg" alt="small-item"></a></li>
-                            <li><a href="#"><img src="img/small2.jpg" alt="small-item"></a></li>
-                            <li><a href="#">Item-3</a></li>
-                        </ul>
-                    </div>
+                <div id="three-panel" class="body-panel">
+                    <ul>
+                        <li><a href="#">Item-1</a></li>
+                        <li><a href="#">Item-2</a></li>
+                        <li><a href="#">Item-3</a></li>
+                    </ul>
                 </div>
-            </div>
 
+            </div>
         </div>
-
-
     </div>
+
     <div class="slider col-xs-12">
         <div class="slide-list">
             <div class="slider-button"><a href="#">View collection</a></div>
@@ -149,6 +449,7 @@
 
 <div class="content">
     <div class="content__section">
+        <div class="double-line"></div>
         <div class="text-center"><h2 class="content__section-name">Popular products</h2>
             <a href="#" class="content__section-view-all" onclick="return false;">View all</a></div>
         <div class="fourfold">
@@ -169,7 +470,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
                 <div class="product text-center">
                     <div class="hover-text transition">
@@ -188,7 +489,7 @@
                             <div class="sale-price"><span>16.99</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
             </div>
 
@@ -208,7 +509,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
                 <div class="product text-center">
                     <div class="hover-text transition">
@@ -225,7 +526,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
             </div>
         </div>
@@ -247,7 +548,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
                 <div class="product text-center">
                     <div class="hover-text transition">
@@ -266,7 +567,7 @@
                             <div class="sale-price"><span>16.99</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
             </div>
 
@@ -286,7 +587,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
                 <div class="product text-center">
                     <div class="hover-text transition">
@@ -303,7 +604,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
             </div>
             <!--<div class="navy prev-slides"></div>-->
@@ -311,7 +612,7 @@
         </div>
     </div>
     <div class="content__section">
-
+        <div class="double-line"></div>
         <div class="text-center"><h2 class="content__section-name">Just arrived</h2>
             <a href="#" class="content__section-view-all" onclick="return false;">View all</a></div>
         <div class="fourfold">
@@ -332,7 +633,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
                 <div class="product text-center">
                     <div class="hover-text transition">
@@ -351,7 +652,7 @@
                             <div class="sale-price"><span>16.99</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
             </div>
 
@@ -371,7 +672,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
                 <div class="product text-center">
                     <div class="hover-text transition">
@@ -388,7 +689,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
             </div>
         </div>
@@ -409,7 +710,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
                 <div class="product text-center">
                     <div class="hover-text transition">
@@ -426,7 +727,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
             </div>
             <div class="twice">
@@ -445,7 +746,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
 
                 <div class="product text-center">
@@ -463,7 +764,7 @@
                             <div class="product__price"><span>65.07</span></div>
                         </div>
                     </div>
-                    <div class="product__add-to-cart"><span>Add to cart</span></div>
+                    <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
             </div>
             <!--<div class="navy prev-slides"></div>-->
@@ -473,8 +774,10 @@
 
 
     <div class="footer">
-        <div class="footer__top text-center"><h2 class="footer__top-name text-center">Worldwide store locator</h2>
-
+        <div class="footer__top text-center">
+            <div class="footer__top-name">
+                <h2 class="text-center  text-center-on-blue">Worldwide store locator</h2>
+            </div>
             <div class="footer__zip center-block">
                 <i class="glyphicon glyphicon-map-marker"></i>
                 <input type="text" placeholder="Zip-code or Address" class="footer__zip-input">
@@ -488,34 +791,36 @@
                     <option value="80 Miles">80 Miles</option>
                 </select></label>
 
-            <div class="footer__find-store">
+            <div class="footer__find-store transition">
                 <span>Find a store</span>
             </div>
         </div>
     </div>
-    <div class="col-xs-offset-1 col-sm-offset-1">
-        <div class="footer__description">
-            <h1 class="aleo-font footer__shopname">Unishop</h1>
+    <div class="col-xs-offset-1 col-sm-offset-0">
+        <div class="footer__wrap clearfix">
+            <div class="footer__description">
+                <h1 class="aleo-font footer__shopname">Unishop</h1>
 
-            <p>Your about us information would fit here nicely.</p>
-        </div>
-        <div class="links-and-social-icons ">
-            <span class="links-head">Links</span>
-            <ul class="links-ul">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Customer Service</a></li>
-                <li><a href="#">Careers</a></li>
-            </ul>
-            <div class="footer__social col-xs-offset-1 col-xs-10">
-                <div class="footer__social-row">
-                    <i class="fa fa-instagram"></i>
-                    <i class="fa fa-twitter-square"></i>
-                    <i class="fa fa-youtube-square"></i></div>
-                <div class="footer__social-row">
-                    <i class="fa fa-linkedin-square"></i>
-                    <i class="fa fa-google-plus-square"></i>
-                    <i class="fa fa-vimeo-square"></i></div>
+                <p>Your about us information would fit here nicely.</p>
+            </div>
+            <div class="links-and-social-icons ">
+                <span class="links-head">Links</span>
+                <ul class="links-ul">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+                <div class="footer__social col-xs-offset-1 col-xs-10">
+                    <div class="footer__social-row">
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-twitter-square"></i>
+                        <i class="fa fa-youtube-square"></i></div>
+                    <div class="footer__social-row">
+                        <i class="fa fa-linkedin-square"></i>
+                        <i class="fa fa-google-plus-square"></i>
+                        <i class="fa fa-vimeo-square"></i></div>
+                </div>
             </div>
         </div>
     </div>
@@ -523,5 +828,6 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/slider.js"></script>
+<script src="js/accordion.js"></script>
 </body>
 </html>
