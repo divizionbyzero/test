@@ -66,6 +66,10 @@ background-color: $white;
     border-top: double 4px $upper-border-color;
   }
 
+  .first-line {
+    top:350px;
+  }
+
   ul.links-ul {
     width: 100%;
     float: right;
@@ -160,40 +164,6 @@ background-color: $white;
     font-size: 14px;
   }
 
-  
-  @keyframes swing
-  {
-    15%
-    {
-      -webkit-transform: translateX(4px);
-      transform: translateX(4px);
-    }
-    30%
-    {
-      -webkit-transform: translateX(-4px);
-      transform: translateX(-4px);
-    }
-    50%
-    {
-      -webkit-transform: translateX(3px);
-      transform: translateX(3px);
-    }
-    65%
-    {
-      -webkit-transform: translateX(-3px);
-      transform: translateX(-3px);
-    }
-    80%
-    {
-      -webkit-transform: translateX(2px);
-      transform: translateX(2px);
-    }
-    100%
-    {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-  }
 
 
 }

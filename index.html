@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title></title>
+    <title>Shop-Chop</title>
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/desktop.css"/>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
 
+<!--------------------------------------------   HEADER --START   ----------------------------------------------->
+
 <div class="header clearfix">
+
+    <!--------------------------------------------   TABS NAVIGATION --START   ------------------------------------>
+
     <div class="header__upper-navigation col-xs-12">
         <div class="header__wrap clearfix">
             <ul class="nav nav-tabs">
-                <li class="active" id="tab-1"><a href="index.html">Unishop</a>
+                <li class="active" id="tab-1"><a href="#">Unishop</a>
                 <li id="tab-2"><a href="#">Twister</a>
                 <li id="tab-3"><a href="#">RockStar's</a>
             </ul>
@@ -29,13 +35,21 @@
             </div>
         </div>
     </div>
+
+    <!--------------------------   TABS NAVIGATION --END  //  LOGO --START  --------------------------------------->
+
     <div class="header__logo">
-        <a href="index.html">
-            <img class="header__logo-bottom" src="img/logo.png" alt="header">
+        <a class="clearfix" href="index.html">
+            <img class="header__logo-bottom" src="img/logo.png" alt="header"/>
         </a>
     </div>
 
+    <!--------------------------   LOGO --END  //  MENU --START  -------------------------------------------------->
+
     <div class="navigation col-xs-12 navbar navbar-default" role="navigation">
+
+        <!----------   MOBILE & TABLET MENU button/  --------------------------------------------->
+
         <button type="button" class="navigation-button navbar-toggle tgl" data-toggle="collapse"
                 data-target="#accordion">
             <span class="sr-only">Toggle navigation</span>
@@ -43,22 +57,30 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
+
+        <!----------   TABLET & DESKTOP MENU /  -------------------------------------------------->
+
         <div class="navigation-wrap clearfix">
             <ul class="nav navbar-nav navbar-left collapse navbar-collapse navbar-style" data-toggle="collapse"
                 data-target="#accordion">
-                <li id="women"><a href="#">Women</a></li>
-                <li id="men"><a href="#">Men</a></li>
-                <li id="children"><a href="#">Children</a></li>
-                <li id="sale"><a href="#">Sale</a></li>
-                <li id="contact"><a href="#">Contact</a></li>
-                <li id="locator"><a href="#">Locator</a></li>
+                <li class="transition" id="women" onclick="return false;"><a href="#">Women</a></li>
+                <li class="transition" id="men" onclick="return false;"><a href="#">Men</a></li>
+                <li class="transition" id="children" onclick="return false;"><a href="#">Children</a></li>
+                <li class="transition" id="sale" onclick="return false;"><a href="#">Sale</a></li>
+                <li class="transition" id="contact" onclick="return false;"><a href="#">Contact</a></li>
+                <li class="transition" id="locator" onclick="return false;"><a href="#">Locator</a></li>
             </ul>
+
+            <!----------   MOBILE & TABLET TOOLBAR /  ------------------------------------------------>
 
             <div class="btn-toolbar pull-right" role="toolbar">
                 <div class="btn-group"><i class="glyphicon glyphicon-user"></i></div>
                 <div class="btn-group"><i class="glyphicon glyphicon-shopping-cart"></i><span class="badge">5</span>
                 </div>
             </div>
+
+            <!----------   SEARCH FORM/  ------------------------------------------------------------->
+
             <div class="right-inner-addon pull-right col-sm-3">
                 <i class="glyphicon glyphicon-search"></i>
                 <input type="search"
@@ -66,7 +88,12 @@
                        placeholder="Search"/>
             </div>
 
+            <!--------------------------------------------   TABLET SUBMENU --START   --------------------------------------->
+
             <div class="tablet-menu clearfix">
+
+                <!----------------   WOMEN submenu open --START   ----------------------------------->
+
                 <div class="submenu-open-tablet" data-id="women">
                     <div>
                         <div class="heading-tablet">
@@ -132,28 +159,43 @@
                         </div>
                         <div class="body-panel-tablet">
                             <ul>
-                                <li><a href="#"><img src="img/small1.jpg"/></a></li>
-                                <li><a href="#"><img src="img/small2.jpg"/></a></li>
+                                <li class="no-hover"><a href="#"><img src="img/small1.jpg" alt="small image there"/></a></li>
+                                <li class="no-hover"><a href="#"><img src="img/small2.jpg" alt="small image there"/></a></li>
                                 <li class="no-hover"><a></a></li>
                                 <li><a href="#">View More Popular</a></li>
                                 <li><a href="#">Today's New Listings</a></li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
+
+                <!----------------   MEN submenu open --START   ------------------------------------->
+
                 <div class="submenu-open-tablet" data-id="men">
                     <div>
                         <div class="heading-tablet">
                             <h4 class="title-panel-tablet">
-                                <a>shop by brands men</a>
+                                <a>shop by products</a>
                             </h4>
                         </div>
-                        <div class="body-panel-tablet">
+                        <div class="body-panel-tablet columns">
                             <ul>
-                                <li><a href="#">Item-1</a></li>
-                                <li><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
+                                <li><a href="#">New in: Clothing</a></li>
+                                <li><a href="#">New in: Accessories</a></li>
+                                <li><a href="#">New in: Shoes</a></li>
+                                <li class="noticeable"><a href="#">Men Grooming</a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Caps & Hats</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Ties</a></li>
+                                <li><a href="#">Suits</a></li>
+                                <li><a href="#">Swimwear</a></li>
+                                <li><a href="#">Officewear</a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li class="no-hover"><a></a></li>
                             </ul>
                         </div>
                     </div>
@@ -165,40 +207,52 @@
                         </div>
                         <div class="body-panel-tablet">
                             <ul>
-                                <li><a href="">Item-1</a></li>
-                                <li class="noticeable"><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
+                                <li><a href="">Asphalt Yacht Club</a></li>
+                                <li><a href="#">Black Scale</a></li>
+                                <li><a href="#">Calvin Klein</a></li>
+                                <li class="no-hover"><a href="#"><img src="img/small5.jpg" alt="small image there"/></a></li>
+                                <li class="bold-item"><a href="#">A to Z Brands</a></li>
                             </ul>
                         </div>
                     </div>
                     <div>
                         <div class="heading-tablet">
                             <h4 class="title-panel-tablet">
-                                <a>shop by brands</a>
+                                <a>most popular</a>
                             </h4>
                         </div>
                         <div class="body-panel-tablet">
                             <ul>
-                                <li><a href="#">Item-1</a></li>
-                                <li><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
+                                <li><a href="#">View Popular</a></li>
+                                <li><a href="#">New Listings</a></li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
+
+                <!----------------   CHILDREN submenu open --START   -------------------------------->
+
                 <div class="submenu-open-tablet" data-id="children">
                     <div>
                         <div class="heading-tablet">
                             <h4 class="title-panel-tablet">
-                                <a>shop by brands children</a>
+                                <a>shop by products</a>
                             </h4>
                         </div>
-                        <div class="body-panel-tablet">
+                        <div class="body-panel-tablet columns">
                             <ul>
-                                <li><a href="#">Item-1</a></li>
-                                <li><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
+                                <li><a href="#">New in: Clothing</a></li>
+                                <li><a href="#">New in: Accessories</a></li>
+                                <li><a href="#">New in: Shoes</a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Jumpers & Cardigans</a></li>
+                                <li class="noticeable"><a href="#">Shirts BIG SALE!</a></li>                                <li><a href="#">Shoes</a></li>
+                                <li><a href="#">Shorts</a></li>
+                                <li><a href="#">Swimwear</a></li>
+                                <li><a href="#">Trousers & Chinos</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Watches</a></li>
                             </ul>
                         </div>
                     </div>
@@ -210,181 +264,183 @@
                         </div>
                         <div class="body-panel-tablet">
                             <ul>
-                                <li><a href="">Item-1</a></li>
-                                <li class="noticeable"><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
+                                <li><a href="">Gap Kids</a></li>
+                                <li><a href="#">Bobo Choses</a></li>
+                                <li><a href="#">American Apparel Kids</a></li>
                             </ul>
                         </div>
                     </div>
                     <div>
                         <div class="heading-tablet">
                             <h4 class="title-panel-tablet">
-                                <a>shop by brands</a>
+                                <a>most popular</a>
                             </h4>
                         </div>
                         <div class="body-panel-tablet">
                             <ul>
-                                <li><a href="#">Item-1</a></li>
-                                <li><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
+                                <li class="no-hover"><a href="#"><img src="img/small9.jpg" alt="small image there"/></a></li>
+                                <li><a href="#">Popular brands</a></li>
+                                <li><a href="#">Good news!</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <!----------------   SALE submenu open --START   ------------------------------------>
+
                 <div class="submenu-open-tablet" data-id="sale">
                     <div>
                         <div class="heading-tablet">
                             <h4 class="title-panel-tablet">
-                                <a>shop by brands sale</a>
+                                <a>Sale by Products</a>
                             </h4>
                         </div>
                         <div class="body-panel-tablet">
                             <ul>
-                                <li><a href="#">Item-1</a></li>
-                                <li><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
+                                <li class="noticeable"><a href="#">All SALES</a></li>
+                                <li class="no-hover"><a></a></li>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Ties</a></li>
+                                <li><a href="#">Caps & Hats</a></li>
+                                <li><a href="#">Jumpers & Cardigans</a></li>
                             </ul>
                         </div>
                     </div>
                     <div>
                         <div class="heading-tablet">
                             <h4 class="title-panel-tablet">
-                                <a>shop by brands</a>
+                                <a>sale by brands</a>
                             </h4>
                         </div>
                         <div class="body-panel-tablet">
                             <ul>
-                                <li><a href="">Item-1</a></li>
-                                <li class="noticeable"><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="heading-tablet">
-                            <h4 class="title-panel-tablet">
-                                <a>shop by brands</a>
-                            </h4>
-                        </div>
-                        <div class="body-panel-tablet">
-                            <ul>
-                                <li><a href="#">Item-1</a></li>
-                                <li><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="submenu-open-tablet" data-id="contact">
-                    <div>
-                        <div class="heading-tablet">
-                            <h4 class="title-panel-tablet">
-                                <a>shop by brands contact</a>
-                            </h4>
-                        </div>
-                        <div class="body-panel-tablet">
-                            <ul>
-                                <li><a href="#">Item-1</a></li>
-                                <li><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="heading-tablet">
-                            <h4 class="title-panel-tablet">
-                                <a>shop by brands</a>
-                            </h4>
-                        </div>
-                        <div class="body-panel-tablet">
-                            <ul>
-                                <li><a href="">Item-1</a></li>
-                                <li class="noticeable"><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="heading-tablet">
-                            <h4 class="title-panel-tablet">
-                                <a>shop by brands</a>
-                            </h4>
-                        </div>
-                        <div class="body-panel-tablet">
-                            <ul>
-                                <li><a href="#">Item-1</a></li>
-                                <li><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="submenu-open-tablet" data-id="locator">
-                    <div>
-                        <div class="heading-tablet">
-                            <h4 class="title-panel-tablet">
-                                <a>shop by brands locator</a>
-                            </h4>
-                        </div>
-                        <div class="body-panel-tablet">
-                            <ul>
-                                <li><a href="#">Item-1</a></li>
-                                <li><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="heading-tablet">
-                            <h4 class="title-panel-tablet">
-                                <a>shop bdfsdfsd</a>
-                            </h4>
-                        </div>
-                        <div class="body-panel-tablet">
-                            <ul>
-                                <li><a href="">Item-1</a></li>
-                                <li class="noticeable"><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="heading-tablet">
-                            <h4 class="title-panel-tablet">
-                                <a>shop by bsdfsdfrands</a>
-                            </h4>
-                        </div>
-                        <div class="body-panel-tablet">
-                            <ul>
-                                <li><a href="#">Item-1</a></li>
-                                <li><a href="#">Item-2</a></li>
-                                <li><a href="#">Item-3</a></li>
-                            </ul>
-                        </div>
+                                <li><a href="">Gucci</a></li>
+                                <li><a href="#">Fortune</a></li>
+                                <li><a href="#">Calvin Klein</a></li>
+                                <li><a href="#">Gustavo Jockardi</a></li>
+                                <li><a href="#">Quiosso</a></li>
+                                <li><a href="#">Half-Half</a></li>
 
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>must have</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#">Hot sale</a></li>
+                                <li><a href="#">Wholesale</a></li>
+                                <li class="no-hover"><a href="#"><img src="img/small10.jpg" alt="small image there"/></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
+                <!----------------   CONTACT submenu open --START   --------------------------------->
+
+                <div class="submenu-open-tablet small" data-id="contact">
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>cities</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet columns">
+                            <ul>
+                                <li><a href="#">New York</a></li>
+                                <li><a href="#">Chicago</a></li>
+                                <li><a href="#">Washington</a></li>
+                                <li class="no-hover"><a href="#"><img src="img/small8.jpg" alt="small image there"/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>how to find us</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="">Google Maps</a></li>
+                                <li><a href="#">Our Coordinates</a></li>
+                                <li><a href="#">Phone</a></li>
+                                <li><a href="#">Social links</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!----------------   LOCATOR submenu open --START   --------------------------------->
+
+                <div class="submenu-open-tablet small" data-id="locator">
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>how to buy</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet columns">
+                            <ul>
+                                <li><a href="">Online shop</a></li>
+                                <li><a href="#">Big shop</a></li>
+                                <li class="noticeable"><a href="#">Get Back Call</a></li>
+                                <li class="no-hover"><a href="#"><img src="img/small7.jpg" alt="small image there"/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="heading-tablet">
+                            <h4 class="title-panel-tablet">
+                                <a>change location</a>
+                            </h4>
+                        </div>
+                        <div class="body-panel-tablet">
+                            <ul>
+                                <li><a href="#">USA</a></li>
+                                <li><a href="#">Europe</a></li>
+                                <li><a href="#">Asia</a></li>
+                                <li><a href="#">Australia</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
             </div>
+
+            <!--------------------------------------------   TABLET SUBMENU --END   ----------------------------------------->
+
         </div>
     </div>
+
+    <!--------------------------   MENU --END  //  ACCORDION --START  --------------------------------------------->
+
     <div id="my-accordion" class="header__navigation">
         <div class="submenu-open">
+
+            <!----------   FIRST GROUP/  ----------------------------------------------->
+
             <div>
                 <div class="heading">
                     <h4 class="title-panel">
-                        <a>shop by brands</a>
+                        <a>search</a>
                     </h4>
                 </div>
                 <div id="one-panel" class="body-panel">
                     <ul>
-                        <li><a href="#">Item-1</a></li>
-                        <li><a href="#">Item-2</a></li>
-                        <li><a href="#">Item-3</a></li>
+                        <li><a href="#">In products</a></li>
+                        <li><a href="#">In brands</a></li>
                     </ul>
                 </div>
             </div>
+
+            <!----------   SECOND GROUP/  ---------------------------------------------->
+
             <div>
                 <div class="heading">
                     <h4 class="title-panel">
@@ -393,62 +449,111 @@
                 </div>
                 <div id="two-panel" class="body-panel">
                     <ul>
-                        <li><a href="">Item-1</a></li>
-                        <li class="noticeable"><a href="#">Item-2</a></li>
-                        <li><a href="#">Item-3</a></li>
+                        <li><a href="">Futura</a></li>
+                        <li class="noticeable"><a href="#">Calvin Klein</a></li>
+                        <li><a href="#">All Stars</a></li>
+                        <li><a href="#">Holywood style</a></li>
+                        <li><a href="#">Other brands</a></li>
+
                     </ul>
                 </div>
             </div>
+
+            <!----------   THIRD GROUP/  ----------------------------------------------->
+
             <div>
                 <div class="heading">
                     <h4 class="title-panel">
-                        <a>shop by brands</a>
+                        <a>promotions</a>
                     </h4>
                 </div>
                 <div id="three-panel" class="body-panel">
                     <ul>
-                        <li><a href="#">Item-1</a></li>
-                        <li><a href="#">Item-2</a></li>
-                        <li><a href="#">Item-3</a></li>
+                        <li><a href="#">Get uniq ID</a></li>
+                        <li><a href="#">All sales</a></li>
                     </ul>
                 </div>
+            </div>
 
+            <!----------   FOURTH GROUP/  ----------------------------------------------->
+
+            <div>
+                <div class="heading">
+                    <h4 class="title-panel">
+                        <a>shop by products</a>
+                    </h4>
+                </div>
+                <div id="fourth-panel" class="body-panel">
+                    <ul>
+                        <li><a href="#">New in: Clothing</a></li>
+                        <li><a href="#">New in: Accessories</a></li>
+                        <li><a href="#">New in: Shoes</a></li>
+                        <li class="noticeable"><a href="#">SALE - Up to 50%</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Caps & Hats</a></li>
+                        <li><a href="#">Jumpers & Cardigans</a></li>
+                        <li><a href="#">Leather Jackets</a></li>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Shoes, Boots & Trainers</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="slider col-xs-12">
-        <div class="slide-list">
-            <div class="navy prev-slide"></div>
-            <div class="navy next-slide"></div>
-            <div class="slider-button"><a href="#">View collection</a></div>
-            <div class="slide-wrap">
-                <div class="slide-item">
-                    <span class="slide-title">Gentlemen, this way please</span>
-                    <span class="slide-p">Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-                        Etiam rhoncus. </span>
+    <!----------------------------------------   ACCORDION --END   ------------------------------------------------>
 
-                    <div class="slide-item-1"></div>
-                </div>
-                <div class="slide-item">
-                    <span class="slide-title">StoReSmart solution present</span>
-                    <span class="slide-p">Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
- </span>
 
-                    <div class="slide-item-2">
-                    </div>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
-
-    </div>
 </div>
 
+<!----------------------------   HEADER --END  //  SLIDER --START   --------------------------------------------->
+
+<div class="slider col-xs-12">
+    <div class="slide-list">
+        <div class="navy prev-slide"></div>
+        <div class="navy next-slide"></div>
+        <div class="slider-button"><a href="#">View collection</a></div>
+        <div class="slide-wrap">
+
+            <div class="slide-item">
+                <span class="slide-title">Gentlemen, this way please</span>
+                    <span class="slide-p">Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                        Etiam rhoncus. </span>
+                <div class="slide-item-1"></div>
+            </div>
+
+            <div class="slide-item">
+                <span class="slide-title">StoReSmart present</span>
+                    <span class="slide-p">Duis leo. Sed fringilla mauris sit amet nibh. Eget bibendum sodales, augue velit cursus nunc.</span>
+                <div class="slide-item-2">
+                </div>
+            </div>
+
+            <div class="slide-item">
+                <span class="slide-title">Also good choice. Curabitur!</span>
+                <span class="slide-p">Sed fringilla mauris sit amet nibh. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</span>
+                <div class="slide-item-3">
+                </div>
+            </div>
+
+            <div class="slide-item">
+                <span class="slide-title">Sed consequat, leo eget bibendum!</span>
+                <span class="slide-p">Fringilla mauris sit eget bibendum sodales, velit cursus augue velit cursus nunc.</span>
+                <div class="slide-item-4">
+                </div>
+            </div>
+
+        </div>
+        <div class="clear"></div>
+    </div>
+
+</div>
+
+<!----------------------------   SLIDER --END  //  CONTENT --START  --------------------------------------------->
 
 <div class="content">
     <div class="content__section">
-        <div class="double-line"></div>
+        <div class="double-line first-line"></div>
         <div class="text-center"><h2 class="content__section-name">Popular products</h2>
             <a href="#" class="content__section-view-all" onclick="return false;">View all</a></div>
         <div class="fourfold">
@@ -459,7 +564,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/1.jpg" alt="product photo">
+                    <img src="img/1.jpg" alt="product photo"/>
 
                     <div class="new"><span>NEW</span></div>
                     <div class="product__description">
@@ -477,7 +582,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/2.jpg" alt="product photo">
+                    <img src="img/2.jpg" alt="product photo"/>
 
                     <div class="sale"><span>SALE</span></div>
                     <div class="product__description">
@@ -499,7 +604,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/3.jpg" alt="product photo">
+                    <img src="img/3.jpg" alt="product photo"/>
 
                     <div class="product__description">
                         <div class="product__info-wrapper">
@@ -516,7 +621,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/4.jpg" alt="product photo">
+                    <img src="img/4.jpg" alt="product photo"/>
 
                     <div class="product__description">
                         <div class="product__info-wrapper">
@@ -537,9 +642,8 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/1.jpg" alt="product photo">
+                    <img src="img/1.jpg" alt="product photo"/>
 
-                    <div class="new"><span>NEW</span></div>
                     <div class="product__description">
                         <div class="product__info-wrapper">
                             <div class="product__name">Dark brogues</div>
@@ -555,7 +659,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/2.jpg" alt="product photo">
+                    <img src="img/2.jpg" alt="product photo"/>
 
                     <div class="sale"><span>SALE</span></div>
                     <div class="product__description">
@@ -577,7 +681,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/3.jpg" alt="product photo">
+                    <img src="img/3.jpg" alt="product photo"/>
 
                     <div class="product__description">
                         <div class="product__info-wrapper">
@@ -594,8 +698,9 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/4.jpg" alt="product photo">
+                    <img src="img/4.jpg" alt="product photo"/>
 
+                    <div class="new"><span>NEW</span></div>
                     <div class="product__description">
                         <div class="product__info-wrapper">
                             <div class="product__name">Dark Brogues</div>
@@ -622,7 +727,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/1.jpg" alt="product photo">
+                    <img src="img/1.jpg" alt="product photo"/>
 
                     <div class="new"><span>NEW</span></div>
                     <div class="product__description">
@@ -640,9 +745,8 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/2.jpg" alt="product photo">
+                    <img src="img/2.jpg" alt="product photo"/>
 
-                    <div class="sale"><span>SALE</span></div>
                     <div class="product__description">
                         <div class="product__info-wrapper">
                             <div class="product__name">Leather hightops</div>
@@ -662,7 +766,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/3.jpg" alt="product photo">
+                    <img src="img/3.jpg" alt="product photo"/>
 
                     <div class="product__description">
                         <div class="product__info-wrapper">
@@ -679,7 +783,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/4.jpg" alt="product photo">
+                    <img src="img/4.jpg" alt="product photo"/>
 
                     <div class="product__description">
                         <div class="product__info-wrapper">
@@ -700,8 +804,9 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/5.jpg" alt="product photo">
+                    <img src="img/5.jpg" alt="product photo"/>
 
+                    <div class="sale"><span>SALE</span></div>
                     <div class="product__description">
                         <div class="product__info-wrapper">
                             <div class="product__name">Leather hightops</div>
@@ -717,7 +822,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/6.jpg" alt="product photo">
+                    <img src="img/6.jpg" alt="product photo"/>
 
                     <div class="product__description">
                         <div class="product__info-wrapper">
@@ -736,7 +841,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/7.jpg" alt="product photo">
+                    <img src="img/7.jpg" alt="product photo"/>
 
                     <div class="product__description">
                         <div class="product__info-wrapper">
@@ -754,7 +859,7 @@
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </span>
                     </div>
-                    <img src="img/8.jpg" alt="product photo">
+                    <img src="img/8.jpg" alt="product photo"/>
 
                     <div class="product__description">
                         <div class="product__info-wrapper">
@@ -766,14 +871,13 @@
                     <div class="product__add-to-cart transition"><span>Add to cart</span></div>
                 </div>
             </div>
-            <!--<div class="navy prev-slides"></div>-->
-            <!--<div class="navy next-slides"></div>-->
         </div>
     </div>
 
 
     <div class="footer">
         <div class="footer__top text-center">
+            <div class="footer_bg"><img src="img/bg.png" alt="earth background"/></div>
             <div class="footer__top-name">
                 <h2 class="text-center  text-center-on-blue">Worldwide store locator</h2>
             </div>
@@ -812,21 +916,24 @@
                 </ul>
                 <div class="footer__social col-xs-offset-1 col-xs-10">
                     <div class="footer__social-row">
-                        <i class="fa fa-instagram"></i>
-                        <i class="fa fa-twitter-square"></i>
-                        <i class="fa fa-youtube-square"></i></div>
+                        <i class="transition fa fa-instagram"></i>
+                        <i class="transition fa fa-twitter-square"></i>
+                        <i class="transition fa fa-youtube-square"></i></div>
                     <div class="footer__social-row">
-                        <i class="fa fa-linkedin-square"></i>
-                        <i class="fa fa-google-plus-square"></i>
-                        <i class="fa fa-vimeo-square"></i></div>
+                        <i class="transition fa fa-linkedin-square"></i>
+                        <i class="transition fa fa-google-plus-square"></i>
+                        <i class="transition fa fa-vimeo-square"></i></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!----------------------------------------   CONTENT --END   ---------------------------------------------------->
+
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/slider.js"></script>
-<script src="js/accordion.js"></script>
+<script src="js/functions.min.js"></script>
+
 </body>
 </html>

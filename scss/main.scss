@@ -20,6 +20,37 @@ $add-to-cart-color: #2fb789;
 $find-store: #167c9a;
 $bottom-background-color: rgba(14, 132, 145, 0.5);
 
+//-------------------------------------------------------------------------------------------- keyframes start
+
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  30% {
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+//-------------------------------------------------------------------------------------------- keyframes end
+
 //-------------------------------------------------------------------------------------------- mixin start
 
 @mixin placeholder-style {
@@ -80,14 +111,19 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
   display: flex !important; /* NEW, Spec - Firefox, Chrome, Opera */
 }
 
-@mixin right-left($property, $vals...) {
-  #{$property}-right: $vals;
-  #{$property}-left: $vals;
+@mixin right-left($property, $v...) {
+  #{$property}-right: $v;
+  #{$property}-left: $v;
 }
 
-@mixin top-bottom($property, $vals...) {
-  #{$property}-top: $vals;
-  #{$property}-bottom: $vals;
+@mixin top-bottom($property, $v...) {
+  #{$property}-top: $v;
+  #{$property}-bottom: $v;
+}
+
+@mixin height-width($h, $w) {
+  height: $h;
+  width: $w;
 }
 
 //-------------------------------------------------------------------------------------------- mixin end
@@ -110,12 +146,12 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
   font-style: normal;
 }
 
-.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, #hexagon > span, .hover-text > span, .slide-p > span, .body-panel-tablet > ul > li > a {
+.aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, #hexagon > span, .body-panel > ul > li > a, .hover-text > span, .slide-p > span, .body-panel-tablet > ul > li > a {
   font-family: Aleo-regular;
 }
 
 .oswald-light-font, .product__add-to-cart span, .content__section-name, .footer__top-name,
-h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-tablet > h4 > a {
+h4.title-panel > a, .navbar-style > li > a, .heading-tablet > h4 > a {
   font-family: "Oswald Light", sans-serif;
 }
 
@@ -126,6 +162,13 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
 
 //-------------------------------------------------------------------------------------------- fonts end
 
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 //-------------------------------------------------------------------------------------------- header start
 
 .header {
@@ -134,7 +177,7 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
 
 .header__upper-navigation {
   background-color: $upper-background-color;
-  border-bottom: 2px solid $upper-border-color;
+  border-bottom: 1px solid $upper-border-color;
   margin-bottom: 30px;
 }
 
@@ -148,21 +191,24 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
   font-weight: 900;
 }
 
+#tab-2 > a {
+  line-height: 18px;
+}
+
 #tab-3 > a {
   font-family: nexa_boldregular, serif;
   font-size: 15px;
 }
 
 .nav-tabs {
+  position: relative;
   text-align: center;
   border-bottom: none;
-  position: relative;
   li {
     position: relative;
     float: none;
     display: inline-block;
-    //bottom: -1px;
-    //height: 36px;
+    height: 33px;
     *display: inline; /* ie7 fix */
 
     zoom: 1; /* hasLayout ie7 trigger */
@@ -182,9 +228,6 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
   }
 }
 
-.active {
-}
-
 .nav > li > a {
   padding: 7px 10px;
   &:hover {
@@ -198,12 +241,18 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
 //----------------------------------------------------------- logo start
 
 .header__logo {
+  margin-top: 0;
   height: 124px;
+  width: auto;
   margin-bottom: 30px;
   text-align: center;
   a {
     display: block;
     height: 124px;
+    img {
+      position: relative;
+      z-index: 500;
+    }
   }
 }
 
@@ -290,14 +339,9 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
   padding: 0;
   background-color: $black;
 
-  &::-moz-selection {
+  &::-moz-selection, &::selection {
     background: transparent;
     color: $white;
-    text-shadow: none;
-  }
-  &::selection {
-    background: transparent;
-    color: #fff;
     text-shadow: none;
   }
 }
@@ -311,7 +355,7 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
 
 .slide-wrap {
   position: relative;
-  left: 0px;
+  left: 0;
   top: 0;
   width: 10000000px;
 }
@@ -320,22 +364,16 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
   position: relative;
   @include box-model(content);
   float: left;
-  padding-right: 54vw;
+  padding-right: 66vw;
   width: 360px;
   height: 290px;
 }
 
-.slide-item-1, .slide-item-2 {
-  height: 290px;
-  background-size: 427px 290px;
-}
-
-.slide-item-1 {
-  background: url("../img/img-1.jpg") no-repeat;
-}
-
-.slide-item-2 {
-  background: url("../img/img-2.jpg") no-repeat $black;
+@for $i from 1 through 4 {
+  .slide-item-#{$i} {
+    height: 290px;
+    background: url("../img/img-#{$i}.jpg") no-repeat;
+  }
 }
 
 .slide-p {
@@ -349,7 +387,7 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
 }
 
 .slide-title {
-  top: 20px;
+  top: 30px;
   display: inline-block;
   margin-left: -150px;
   width: 300px;
@@ -362,15 +400,17 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
   top: 210px;
   width: 150px;
   height: 50px;
-  border: 3px solid $white;
-  background-color: $black;
+  border: 2px solid $white;
   margin-left: -75px;
   z-index: 2;
+  background-color: transparentize($black, .5);
+  &:hover {
+    background-color: lighten($black, 10%);
+  }
   a {
     line-height: 45px;
     color: $white;
     font-size: 20px;
-    text-decoration: none;
   }
 }
 
@@ -399,7 +439,7 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
 
 .prev-slide {
   left: 10px;
-  top: 40px;
+  top: 9px;
   &:before {
     content: url("../img/left.png");
   }
@@ -407,7 +447,7 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
 
 .next-slide {
   right: 25px;
-  top: 40px;
+  top: 9px;
   &:before {
     content: url("../img/right.png");
   }
@@ -440,6 +480,7 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
   color: $white;
   font-size: 16px;
   background-color: $navigation-border;
+  text-transform: none;
   &:hover {
     background-color: $black;
     color: $white;
@@ -485,8 +526,6 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
 }
 
 h4.title-panel > a, .body-panel ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
   &:hover {
     cursor: pointer;
   }
@@ -498,6 +537,7 @@ h4.panel-title > a {
   height: 100%;
   line-height: 37px;
   padding-left: 5px;
+  text-transform: uppercase;
 }
 
 .heading {
@@ -524,17 +564,16 @@ h4.panel-title > a {
   border: none;
 }
 
-.panel-body > ul > li.noticeable, .panel-body > ul > li.noticeable > a {
-  background-color: $white;
+li.noticeable, li.noticeable a {
+  background-color: $white !important;
 }
 
-.panel-body > ul > li.noticeable > a {
-  border: none;
+li.noticeable a {
+  border: none !important;
   line-height: 40px;
-  color: $black;
-  font-family: nexa_boldregular, serif;
-  margin-left: 20px;
-  text-transform: none;
+  color: $black !important;
+  margin-left: 10px;
+  font-weight: 900;
 }
 
 .submenu-open-tablet {
@@ -678,9 +717,15 @@ h4.panel-title > a {
 
 //-------------------------------------------------------------------------------------------- footer start
 
+.footer_bg {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+}
+
 .footer__top {
   height: 525px;
-  background: url("../img/bg.png") repeat-x;
   border-bottom: 1px solid $upper-border-color;
 }
 
@@ -863,3 +908,10 @@ label:after {
     }
   }
 }
+
+@media screen and (max-width: 440px) {
+  .slide-item-1, .slide-item-2 {
+    background-repeat: round;
+  }
+}
+

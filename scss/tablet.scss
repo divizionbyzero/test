@@ -7,6 +7,10 @@ $li-noticeable: #62214e;
 
 @media screen and (min-width: 600px) {
 
+  .heading-tablet {
+    display: none;
+  }
+
   //-------------------------------------------------------------------------------------------- products start
 
   .product {
@@ -72,6 +76,10 @@ $li-noticeable: #62214e;
 
   .footer__social-row {
     width: 50%;
+    i:hover {
+      color: $find-store;
+      cursor: pointer;
+    }
   }
 
   //-------------------------------------------------------------------------------------------- footer start
@@ -109,19 +117,10 @@ $li-noticeable: #62214e;
     &:hover {
       opacity: 1;
       cursor: pointer;
+      z-index: 400;
     }
   }
 
-  .tablet-submenu-open {
-    height: 100%;
-    //width: 80%;
-    @include flexbox(row, nowrap, justify, flex-start);
-    border: 2px solid $navigation-border;
-    .panel-default > .panel-heading {
-      border: none;
-    }
-
-  }
   .panel-tablet {
     width: 33.3%;
     border-right: 1px solid $upper-border-color;
@@ -164,6 +163,7 @@ $li-noticeable: #62214e;
     margin-left: 0;
   }
   .slide-title {
+    top: 20px;
     text-align: left;
     left: 50vw;
     width: 300px;
@@ -174,7 +174,7 @@ $li-noticeable: #62214e;
   .slide-p {
     position: absolute;
     left: 50vw;
-    top: 105px;
+    top: 110px;
     display: inline-block;
     width: 40vw;
     line-height: 1.15em;
@@ -192,11 +192,6 @@ $li-noticeable: #62214e;
 
 }
 
-@media screen and (min-width: 692px){
-
-}
-
-
 @media screen and (min-width: 768px) {
   //--------------------------------------------tablet submenu start
   .submenu-open-tablet {
@@ -205,7 +200,7 @@ $li-noticeable: #62214e;
     position: absolute;
     top: 34px;
     min-width: 500px;
-    //height: 300px;
+    padding-bottom: 10px;
     border: 2px solid $navigation-border;
     z-index: 500;
     background-color: $almost-white;
@@ -214,9 +209,26 @@ $li-noticeable: #62214e;
     }
   }
 
+  .small {
+    min-width: 300px;
+  }
+
+  .active-li {
+    background-color: $navigation-border;
+    transition: 1s;
+    a:link, a:hover, a:visited, a:active {
+      color: $white !important;
+    }
+  }
+
   .footer__description {
     margin-left: 4%;
   }
+
+  .links-and-social-icons {
+    margin-right: 4%;
+  }
+
   .heading-tablet {
     display: block;
     padding: 15px 35px 10px 15px;
@@ -250,6 +262,7 @@ $li-noticeable: #62214e;
       @include right-left(margin, 10px);
       color: $navigation-border;
       font-size: 15px;
+      transition: .5s;
       &:hover {
         cursor: pointer;
         background-color: $navigation-border;
@@ -269,23 +282,35 @@ $li-noticeable: #62214e;
     }
   }
 
-  li.noticeable a {
-    background-color: $li-noticeable;
-    color: $white !important;
-    @include right-left(padding, 15px !important);
-    &:hover {
-      background-color: $svg-color !important;
+  li.noticeable {
+    @include top-bottom(margin, 0 !important);
+    padding-top: 0 !important;
+    a {
+      background-color: $li-noticeable !important;
+      color: $white !important;
+      @include right-left(padding, 15px !important);
+      &:hover {
+        background-color: $svg-color !important;
+      }
     }
   }
+
   li.bold-item a {
     font-weight: 900 !important;
   }
+
+  .body-panel-tablet {
+    //  @include top-bottom(padding, 10px);
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
   //--------------------------------------------tablet submenu end
+
   .header__navigation {
     display: none;
   }
-
-
 
   .btn-toolbar.pull-right {
     display: none;
@@ -294,10 +319,13 @@ $li-noticeable: #62214e;
     font-size: 17px;
     li:hover {
       background-color: $find-store;
+      transition: 1s;
     }
   }
+
   .navbar-default .navbar-nav > li > a:hover {
     color: $white;
+    //transition: 1s;
   }
 
   .figure-inner {
@@ -312,7 +340,7 @@ $li-noticeable: #62214e;
       top: 33px;
       color: $white;
       font-size: 15px;
-      z-index: 3;
+      z-index: 300;
     }
     span {
       color: $white;
@@ -330,6 +358,8 @@ $li-noticeable: #62214e;
     height: 35px;
     background: $svg-color;
     text-align: center;
+    z-index: 2;
+
   }
   #hexagon:after {
     content: "";
@@ -347,14 +377,16 @@ $li-noticeable: #62214e;
   }
 
   .slide-title {
-    width: 30vw;
+    width: 35vw;
   }
-  .noticeable a{
-    &:hover {
-      -webkit-animation: swing 1s ease;
-      animation: swing 1s ease;
-      -webkit-animation-iteration-count: 1;
-      animation-iteration-count: 1;
+  .noticeable {
+    a {
+      &:hover {
+        -webkit-animation: swing 1s ease;
+        animation: swing 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+      }
     }
   }
 }
