@@ -4,10 +4,11 @@
 @media screen and (min-width: 800px) {
 
   .header__wrap, .navigation-wrap {
-    max-width: 1100px;
+    max-width: 1200px;
     position: relative;
     margin: 0 auto;
   }
+
 
   .product {
     width: 250px;
@@ -90,7 +91,7 @@ background-color: $white;
   max-width: 1100px;
 }
   .footer__description {
-    margin-left: 0;
+    //margin-left: 0;
   }
 
   .links-and-social-icons {
@@ -112,6 +113,11 @@ background-color: $white;
     text-align: justify;
     padding: 10px;
   }
+
+.slide-list {
+  width: 100%;
+  margin: 0 auto;
+}
 
   .prev-slides, .next-slides {
     display: inline-block;
@@ -152,5 +158,61 @@ background-color: $white;
     top: 5px;
     pointer-events: none;
     font-size: 14px;
+  }
+
+  
+  @keyframes swing
+  {
+    15%
+    {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+    30%
+    {
+      -webkit-transform: translateX(-4px);
+      transform: translateX(-4px);
+    }
+    50%
+    {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+    }
+    65%
+    {
+      -webkit-transform: translateX(-3px);
+      transform: translateX(-3px);
+    }
+    80%
+    {
+      -webkit-transform: translateX(2px);
+      transform: translateX(2px);
+    }
+    100%
+    {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  .slide-list {
+    max-width: 1200px;
+    overflow: hidden;
+  }
+
+  .slide-p, .slide-title, .slider-button {
+    left: 600px;
+  }
+  .slide-p, .slide-title {
+    max-width: 450px;
+  }
+  .slide-item-1, .slide-item-2 {
+    position: relative;
+    left: 15%;
   }
 }

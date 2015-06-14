@@ -91,7 +91,6 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
 }
 
 //-------------------------------------------------------------------------------------------- mixin end
-
 //-------------------------------------------------------------------------------------------- fonts start
 
 @font-face {
@@ -289,6 +288,8 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
   position: relative;
   overflow: hidden;
   padding: 0;
+  background-color: $black;
+
   &::-moz-selection {
     background: transparent;
     color: $white;
@@ -319,7 +320,7 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
   position: relative;
   @include box-model(content);
   float: left;
-  padding-right: 85vw;
+  padding-right: 54vw;
   width: 360px;
   height: 290px;
 }
@@ -415,10 +416,6 @@ h4.title-panel > a, .body-panel > ul > li > a, .navbar-style > li > a, .heading-
 //----------------------------------------------------------- slider end
 
 //----------------------------------------------------------- navigation start
-
-.heading-tablet {
-  display: none;
-}
 
 .header__navigation {
   position: absolute !important;

@@ -6,6 +6,9 @@ html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acro
   color: #000;
   vertical-align: baseline; }
 
+.heading-tablet {
+  display: none; }
+
 * {
   box-sizing: border-box; }
   * html .clearfix {

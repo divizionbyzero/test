@@ -15,6 +15,10 @@ $font_2: serif;
     vertical-align: baseline;
 }
 
+.heading-tablet {
+  display: none;
+}
+
 * {
 //Instead of the line below you could use @includebox-sizing($bs)
 box-sizing: border-box;
