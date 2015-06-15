@@ -6,10 +6,11 @@ $(document).ready(function () {
     /* --------------------------    Accordion tabs slide          */
     $(".heading").click(function () {
         $(this).toggleClass('select-heading');
-        var idElement = $(this).siblings(".body-panel").attr('id');
+        var $idElement = $(this).siblings(".body-panel").attr('id');
+        var $slideElement = $(".body-panel:not(#" + $idElement + ")");
         $(this).siblings(".body-panel").slideToggle('slow');
-        $(".body-panel:not(#" + idElement + ")").slideUp('slow');
-        $(".body-panel:not(#" + idElement + ")").prev('.select-heading').removeClass('select-heading');
+        $slideElement.slideUp('slow');
+        $slideElement.prev('.select-heading').removeClass('select-heading');
     });
     /* --------------------------    Tablet menu                   */
     $('.submenu-open-tablet').hide();
@@ -30,11 +31,9 @@ $(document).ready(function () {
     var slideWrap = $('.slide-wrap');
     var slideWidth = $('.slide-item').outerWidth();
     var newLeftPos = slideWrap.position().left - slideWidth;
-    console.log("//" + slideWidth);
     $(window).resize(function () {
         slideWidth = $('.slide-item').outerWidth();
         newLeftPos = slideWrap.position().left - slideWidth;
-        console.log(slideWidth);
     });
     var nextLink = $('.next-slide');
     var prevLink = $('.prev-slide');
@@ -67,45 +66,68 @@ $(document).ready(function () {
         }
     });
     /* --------------------------    View all products                   */
-    var productHalfBlock = '.twice:nth-last-of-type(n+2)';
-    var productBlock = '.fourfold:nth-last-of-type(n+2)';
+    var $productHalfBlock = '.twice:nth-last-of-type(n+2)';
+    var $productBlock = '.fourfold:nth-last-of-type(n+2)';
     $('.content__section-view-all').click(function (e) {
-        $(e.target).addClass('clicked');
-        if ($('body').width() < 582) {
-            $('.clicked').closest('.content__section').find(productBlock).removeClass('flex-display');
-            $('.clicked').closest('.content__section').find(productHalfBlock).removeClass('flex-display');
-            $(e.target).closest('.content__section').find(productBlock).addClass('block-display');
-        }
-        else if ($('body').width() > 781) {
-            $(e.target).closest('.content__section').find(productBlock).addClass('flex-display');
-            $(e.target).closest('.content__section').find(productHalfBlock).addClass('flex-display');
+        $(e.target).toggleClass('clicked');
+        $(e.target).addClass('some-class');
+        var $changeDisplay = $('.clicked').closest('.content__section');
+        var $fourfolds = $changeDisplay.find($productBlock);
+        var $twices = $changeDisplay.find($productHalfBlock);
+
+        if ($(e.target).hasClass("clicked")) {
+            $(e.target).text("Close all");
+            if ($('body').width() < 582) {
+                $fourfolds.removeClass('flex-display');
+                $twices.removeClass('flex-display');
+                $fourfolds.addClass('block-display');
+            }
+            else if ($('body').width() > 781) {
+                $fourfolds.addClass('flex-display');
+                $twices.addClass('flex-display');
+            }
+            else {
+                $fourfolds.addClass('block-display');
+                $twices.addClass('flex-display');
+            }
         }
         else {
-            $(e.target).closest('.content__section').find(productBlock).addClass('block-display');
-            $(e.target).closest('.content__section').find(productHalfBlock).addClass('flex-display');
+            var $closeIt =  $(e.target).closest('.content__section');
+            $(e.target).text("View all");
+            $closeIt.find($productBlock).removeClass('flex-display');
+            $closeIt.find($productHalfBlock).removeClass('flex-display');
+            $closeIt.find($productBlock).removeClass('block-display');
+            $closeIt.find($productHalfBlock).removeClass('block-display');
         }
     });
     $(window).resize(function () {
+
+        /* submenu fix*/
         $('.submenu-open-tablet').hide();
         $(".navbar-nav>li").removeClass("active-li");
-        if (($('body').width() < 582) && ( $('.clicked').closest('.content__section').find(productBlock).hasClass('block-display') == true)) {
-            $('.clicked').closest('.content__section').find(productBlock).removeClass('flex-display');
-            $('.clicked').closest('.content__section').find(productHalfBlock).removeClass('flex-display');
-            $('.clicked').closest('.content__section').find(productHalfBlock).removeClass('block-display');
-            $('.clicked').closest('.content__section').find(productBlock).addClass('block-display');
+
+        var $changeDisplayResize = $('.clicked').closest('.content__section');
+        var $fourfold = $changeDisplayResize.find($productBlock);
+        var $twice = $changeDisplayResize.find($productHalfBlock);
+
+        if (($('body').width() < 582) && ( $fourfold.hasClass('block-display') == true)) {
+            $fourfold.removeClass('flex-display');
+            $twice.removeClass('flex-display');
+            $twice.removeClass('block-display');
+            $fourfold.addClass('block-display');
 
         }
-        if (($('body').width() > 781) && (($('.clicked').closest('.content__section').find(productBlock).hasClass('block-display') == true) || ($('.clicked').closest('.content__section').find(productBlock).hasClass('flex-display') == true))) {
-            $('.clicked').closest('.content__section').find(productBlock).removeClass('block-display');
-            $('.clicked').closest('.content__section').find(productHalfBlock).removeClass('block-display');
-            $('.clicked').closest('.content__section').find(productBlock).addClass('flex-display');
-            $('.clicked').closest('.content__section').find(productHalfBlock).addClass('flex-display');
+        if (($('body').width() > 781) && (($fourfold.hasClass('block-display') == true) || ($fourfold.hasClass('flex-display') == true))) {
+            $fourfold.removeClass('block-display');
+            $twice.removeClass('block-display');
+            $fourfold.addClass('flex-display');
+            $twice.addClass('flex-display');
         }
-        if ((($('body').width() > 581) && ($('body').width() < 782)) && (($('.clicked').closest('.content__section').find(productBlock).hasClass('block-display') == true) || ($('.clicked').closest('.content__section').find(productBlock).hasClass('flex-display') == true))) {
-            $('.clicked').closest('.content__section').find(productBlock).removeClass('flex-display');
-            $('.clicked').closest('.content__section').find(productHalfBlock).removeClass('block-display');
-            $('.clicked').closest('.content__section').find(productBlock).addClass('block-display');
-            $('.clicked').closest('.content__section').find(productHalfBlock).addClass('flex-display');
+        if ((($('body').width() > 581) && ($('body').width() < 782)) && (($fourfold.hasClass('block-display') == true) || ($fourfold.hasClass('flex-display') == true))) {
+            $fourfold.removeClass('flex-display');
+            $twice.removeClass('block-display');
+            $fourfold.addClass('block-display');
+            $twice.addClass('flex-display');
         }
 
     });

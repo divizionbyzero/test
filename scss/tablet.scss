@@ -149,7 +149,7 @@ $li-noticeable: #62214e;
     background-color: $almost-white;
     border: none;
     color: $submenu-header-color;
-    font-family: Aleo-regular;
+    font-family: $font_0, serif;
     text-transform: none;
     & > img {
       display: block;
@@ -355,7 +355,7 @@ $li-noticeable: #62214e;
     top: 0;
     right: 40px;
     width: 200px;
-    height: 35px;
+    height: 33px;
     background: $svg-color;
     text-align: center;
     z-index: 2;

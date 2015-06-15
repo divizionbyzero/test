@@ -20,6 +20,11 @@ $add-to-cart-color: #2fb789;
 $find-store: #167c9a;
 $bottom-background-color: rgba(14, 132, 145, 0.5);
 
+$font_0: Aleo-regular;
+$font_1: Oswald Light;
+$font_2: nexa_boldregular;
+$font_3: Oswald;
+
 //-------------------------------------------------------------------------------------------- keyframes start
 
 @keyframes swing {
@@ -50,7 +55,6 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
 }
 
 //-------------------------------------------------------------------------------------------- keyframes end
-
 //-------------------------------------------------------------------------------------------- mixin start
 
 @mixin placeholder-style {
@@ -130,43 +134,49 @@ $bottom-background-color: rgba(14, 132, 145, 0.5);
 //-------------------------------------------------------------------------------------------- fonts start
 
 @font-face {
-  font-family: Aleo-regular;
+  font-family: $font_0;
   src: url("../fonts/aleo-regular.woff");
 }
 
 @font-face {
-  font-family: "Oswald Light";
+  font-family: $font_1;
   src: url("../fonts/oswald-light-webfont.woff");
 }
 
 @font-face {
-  font-family: nexa_boldregular;
+  font-family: $font_2;
   src: url('../fonts/Nexa_Free_Bold-webfont.woff');
   font-weight: normal;
   font-style: normal;
 }
 
 .aleo-font, .content__section-view-all, .slide-title, #tab-1 > a, #hexagon > span, .body-panel > ul > li > a, .hover-text > span, .slide-p > span, .body-panel-tablet > ul > li > a {
-  font-family: Aleo-regular;
+  font-family: $font_0;
 }
 
 .oswald-light-font, .product__add-to-cart span, .content__section-name, .footer__top-name,
 h4.title-panel > a, .navbar-style > li > a, .heading-tablet > h4 > a {
-  font-family: "Oswald Light", sans-serif;
+  font-family: $font_1, sans-serif;
 }
 
 .oswald-regular-font, .product__name, .links-head, .product__price span, .footer__radius,
 .change-miles, .footer__find-store span, .links-ul li a, .slider-button > a, #tab-2 > a, .new > span, .sale > span, .sale-price > span {
-  font-family: 'Oswald', sans-serif;
+  font-family: $font_3, sans-serif;
 }
 
 //-------------------------------------------------------------------------------------------- fonts end
+//-------------------------------------------------------------------------------------------- extends start
 
-a {
+%center_wrap_block {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+//-------------------------------------------------------------------------------------------- extends end
+
+a, a:hover {
   text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 //-------------------------------------------------------------------------------------------- header start
@@ -176,9 +186,9 @@ a {
 }
 
 .header__upper-navigation {
-  background-color: $upper-background-color;
-  border-bottom: 1px solid $upper-border-color;
   margin-bottom: 30px;
+  border-bottom: 1px solid $upper-border-color;
+  background-color: $upper-background-color;
 }
 
 //----------------------------------------------------------- tabs start
@@ -191,12 +201,12 @@ a {
   font-weight: 900;
 }
 
-#tab-2 > a {
+#tab-2 a {
   line-height: 18px;
 }
 
-#tab-3 > a {
-  font-family: nexa_boldregular, serif;
+#tab-3 a {
+  font-family: $font_2, serif;
   font-size: 15px;
 }
 
@@ -208,9 +218,8 @@ a {
     position: relative;
     float: none;
     display: inline-block;
-    height: 33px;
+    height: 32px;
     *display: inline; /* ie7 fix */
-
     zoom: 1; /* hasLayout ie7 trigger */
     &:first-of-type, &:last-of-type {
       @include right-left(border, 1px solid $upper-border-color);
@@ -218,7 +227,6 @@ a {
     &:hover {
       position: relative;
       background-color: $white;
-
     }
     a {
       border: none;
@@ -237,7 +245,6 @@ a {
 }
 
 //----------------------------------------------------------- tabs end
-
 //----------------------------------------------------------- logo start
 
 .header__logo {
@@ -257,9 +264,7 @@ a {
 }
 
 .header__logo-top, .header__logo-bottom {
-  margin: 0 auto;
-  display: block;
-  position: relative;
+  @extend %center_wrap_block;
 }
 
 .header__logo-top {
@@ -769,7 +774,7 @@ li.noticeable a {
 }
 
 @include placeholder-style() {
-  font-family: 'Oswald Light', sans-serif;
+  font-family: $font_1, sans-serif;
   font-size: 18px;
 }
 
@@ -805,7 +810,7 @@ label {
 label:after {
   position: absolute;
   content: '\25C0 \25B6';
-  font: 14px "Oswald", monospace;
+  font: 14px $font_3, monospace;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
